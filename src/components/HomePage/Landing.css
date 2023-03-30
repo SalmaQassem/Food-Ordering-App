@@ -1,0 +1,77 @@
+.landing {
+  padding: 45px 0 75px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  .landing {
+    justify-content: start;
+  }
+}
+.slider {
+  width: 100%;
+}
+.slider .slide {
+  width: 100%;
+}
+.text {
+  width: 100%;
+  height: fit-content;
+  text-align: start;
+  color: #fff;
+  margin-bottom: 145px;
+}
+@media (min-width: 768px) {
+  .text {
+    max-width: 58%;
+  }
+}
+@media (min-width: 992px) {
+  .text {
+    max-width: 50%;
+  }
+}
+.text h1 {
+  margin-bottom: 15px;
+  font-family: "DancingScript-Bold", cursive;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+@media (max-width: 376px) {
+  .text h1 {
+    font-size: 3rem;
+  }
+}
+.text p {
+  margin-bottom: 1rem;
+  font-size: 14px;
+}
+.landing-btn {
+  padding: 10px 45px !important;
+  margin: 10px 0 0 0 !important;
+}
+.dots-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+@media (max-width: 992px) {
+  .dots-list {
+    margin-top: 45px;
+  }
+}
+.dots-list li {
+  width: 12px;
+  height: 12px;
+  margin: 10px 3px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.dots-list li.active {
+  width: 20px;
+  height: 20px;
+  background-color: #ffbe33;
+}
