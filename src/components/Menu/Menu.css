@@ -1,0 +1,105 @@
+.heading h2 {
+  font-family: "DancingScript-Bold", cursive;
+  font-size: 40px;
+  text-transform: capitalize;
+}
+.menu-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0 20px 0;
+  list-style: none;
+}
+.menu-filters li {
+  padding: 7px 25px;
+  border-radius: 25px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.menu-filters li.active {
+  color: #fff;
+  background-color: #222831;
+}
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 25px;
+}
+.menu-items .menu-item {
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
+}
+@media (max-width: 576px) {
+  .menu-items .menu-item {
+    max-width: 100%;
+    flex: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .menu-items .menu-item {
+    max-width: calc((100% - 30px) / 2);
+    flex: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 992px) {
+  .menu-items .menu-item {
+    max-width: calc((100% - 60px) / 3);
+    flex: calc((100% - 60px) / 3);
+  }
+}
+.menu-items .menu-item .menu-image {
+  width: 100%;
+  height: 215px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 0 45px;
+  background-color: #f1f2f3;
+}
+.menu-items .menu-item .menu-image img {
+  max-width: 100%;
+  max-height: 145px;
+  transition: 0.2s;
+}
+.menu-items .menu-item .menu-image img:hover {
+  transform: scale(1.1);
+}
+.menu-items .menu-item .item-desc {
+  padding: 25px;
+  text-align: start;
+  color: #fff;
+}
+.menu-items .menu-item .item-desc h5 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.menu-items .menu-item .item-desc p {
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+.menu-items .menu-item .item-desc .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-items .menu-item .item-desc .price h6 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px 0 8px;
+}
+.menu-items .menu-item .item-desc .price a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}

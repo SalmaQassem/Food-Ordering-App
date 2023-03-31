@@ -64,6 +64,10 @@
 .offers-items .item .image img {
   width: 100%;
   height: 100%;
+  transition: 0.2s;
+}
+.offers-items .item .image img:hover {
+  transform: scale(1.1);
 }
 .item-description {
   text-align: start;
