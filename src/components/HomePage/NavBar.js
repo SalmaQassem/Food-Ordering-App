@@ -1,6 +1,9 @@
 import "./NavBar.css";
+import { useContext } from "react";
+import CartContext from "../../CartContext/CartContext";
 import Container from "../UI/Container";
 import Button from "../UI/Button";
+import Cart from "../Cart/Cart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -10,6 +13,8 @@ import {
 import { useState, useEffect } from "react";
 
 const NavBar = () => {
+  const context = useContext(CartContext);
+
   const [isTogglerOpened, setIsTogglerOpened] = useState(false);
   const onClickTogglerHandler = () => {
     setIsTogglerOpened(!isTogglerOpened);
@@ -30,6 +35,11 @@ const NavBar = () => {
         .classList.remove("opened");
     }
   }, [isTogglerOpened]);
+
+  const onCartClickHandler = () => {
+    document.getElementById("Cart").classList.add("opened");
+    document.querySelector(".cart-overlay").classList.add("opened");
+  };
 
   return (
     <div className="navbar">
@@ -65,13 +75,18 @@ const NavBar = () => {
                     <FontAwesomeIcon icon={faUser} />
                   </a>
                 </li>
-                <li>
-                  <a href="#Cart">
+                <li
+                  className="cart"
+                  data-before={
+                    context.totalAmount > 0 ? context.totalAmount : ""
+                  }
+                >
+                  <a href="#Cart" onClick={onCartClickHandler}>
                     <FontAwesomeIcon icon={faCartShopping} />
                   </a>
                 </li>
                 <li>
-                  <a href="#Cart">
+                  <a href="#Search">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                   </a>
                 </li>

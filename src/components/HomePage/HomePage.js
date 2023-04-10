@@ -6,7 +6,9 @@ import Landing from "./Landing";
 const HomePage = () => {
   return (
     <section className="home" id="Home">
-      <img src={background} alt="" />
+      <div className="bg-Image">
+        <img src={background} alt="" />
+      </div>
       <NavBar />
       <Landing />
     </section>
