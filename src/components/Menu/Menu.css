@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   margin: 40px 0 20px 0;
   list-style: none;
+  overflow: hidden;
 }
 .menu-filters li {
   padding: 7px 25px;
@@ -26,6 +27,8 @@
   flex-wrap: wrap;
   gap: 30px;
   padding-top: 25px;
+  position: relative;
+  overflow: hidden;
 }
 .menu-items .menu-item {
   border-radius: 15px;
@@ -34,7 +37,7 @@
   transition: 0.6s;
   /*display: none;*/
   position: absolute;
-  left: 100%;
+  left: -100%;
   transform: scale(0);
 }
 .menu-items .menu-item.active {

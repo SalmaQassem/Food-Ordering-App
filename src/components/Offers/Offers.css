@@ -47,8 +47,8 @@
   }
 }
 .offers-items .item .image {
-  width: 175px;
-  height: 175px;
+  max-width: 175px;
+  max-height: 175px;
   margin-right: 15px;
   border-radius: 50%;
   border: 5px solid #ffbe33;
