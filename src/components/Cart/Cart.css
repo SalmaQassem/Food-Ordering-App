@@ -11,6 +11,11 @@
   justify-content: space-between;
   transition: 0.3s ease-in-out;
 }
+@media (max-width: 576px) {
+  #Cart {
+    width: 250px;
+  }
+}
 #Cart.opened {
   right: 0;
 }
@@ -94,6 +99,12 @@
   align-items: center;
   justify-content: end;
   gap: 10px;
+  margin-top: 10px;
+}
+@media (max-width: 576px) {
+  .checkout .checkout-buttons {
+    justify-content: center;
+  }
 }
 .checkout .checkout-buttons > a {
   margin: 0;
