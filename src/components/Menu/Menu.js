@@ -1,5 +1,5 @@
 import "./Menu.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CartContext from "../../CartContext/CartContext";
 import Container from "../UI/Container";
 import AddButton from "../UI/AddButton";
@@ -24,6 +24,7 @@ const menuItems = [
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
     price: 20,
     amount: 1,
+    category: "pizza",
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ const menuItems = [
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
     price: 15,
     amount: 1,
+    category: "burger",
   },
   {
     id: 3,
@@ -42,6 +44,7 @@ const menuItems = [
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
     price: 17,
     amount: 1,
+    category: "pizza",
   },
   {
     id: 4,
@@ -51,6 +54,7 @@ const menuItems = [
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
     price: 18,
     amount: 1,
+    category: "pasta",
   },
   {
     id: 5,
@@ -60,6 +64,7 @@ const menuItems = [
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
     price: 10,
     amount: 1,
+    category: "fries",
   },
   {
     id: 6,
@@ -69,6 +74,7 @@ const menuItems = [
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
     price: 15,
     amount: 1,
+    category: "pizza",
   },
   {
     id: 7,
@@ -78,6 +84,7 @@ const menuItems = [
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
     price: 12,
     amount: 1,
+    category: "burger",
   },
   {
     id: 8,
@@ -87,6 +94,7 @@ const menuItems = [
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
     price: 14,
     amount: 1,
+    category: "burger",
   },
   {
     id: 9,
@@ -96,12 +104,13 @@ const menuItems = [
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
     price: 10,
     amount: 1,
+    category: "pasta",
   },
 ];
 
 const Menu = () => {
   const context = useContext(CartContext);
-
+  const [activeCategory, setActiveCategory] = useState("all");
   const onFormSubmitHandler = (e) => {
     e.preventDefault();
     for (let i = 0; i < menuItems.length; i++) {
@@ -119,6 +128,15 @@ const Menu = () => {
     }
   };
 
+  const onClickFilterHandler = (e) => {
+    const categories = document.querySelectorAll("#Menu .menu-filters li");
+    for (let i = 0; i < categories.length; i++) {
+      categories[i].classList.remove("active");
+    }
+    e.target.classList.add("active");
+    setActiveCategory(e.target.textContent);
+  };
+
   return (
     <section id="Menu">
       <Container>
@@ -126,17 +144,23 @@ const Menu = () => {
           <h2>our menu</h2>
         </div>
         <ul className="menu-filters">
-          <li className="active">all</li>
-          <li>burger</li>
-          <li>pizza</li>
-          <li>pasta</li>
-          <li>fries</li>
+          <li className="active" onClick={onClickFilterHandler}>
+            all
+          </li>
+          <li onClick={onClickFilterHandler}>burger</li>
+          <li onClick={onClickFilterHandler}>pizza</li>
+          <li onClick={onClickFilterHandler}>pasta</li>
+          <li onClick={onClickFilterHandler}>fries</li>
         </ul>
         <div className="menu-items">
           {menuItems.map((item) => {
             return (
               <form
-                className="menu-item"
+                className={
+                  activeCategory === item.category || activeCategory === "all"
+                    ? "menu-item active"
+                    : "menu-item"
+                }
                 onSubmit={onFormSubmitHandler}
                 id={item.id}
                 key={item.id}
