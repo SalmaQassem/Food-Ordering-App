@@ -105,11 +105,6 @@
   gap: 10px;
   margin-top: 10px;
 }
-@media (max-width: 576px) {
-  .checkout .checkout-buttons {
-    justify-content: center;
-  }
-}
 .checkout .checkout-buttons > a {
   margin: 0;
   padding: 5px 20px;
