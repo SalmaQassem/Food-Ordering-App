@@ -4,7 +4,7 @@ const Button = styled.a`
   display: inline-block;
   padding: 8px 30px;
   margin: 0 10px;
-  background-color: #ffbe33;
+  background-color: var(--MainColor);
   color: #fff;
   border-radius: 45px;
   text-transform: capitalize;
@@ -14,7 +14,7 @@ const Button = styled.a`
   transition: 0.3s;
 
   &:hover {
-    background-color: #e69c00;
+    background-color: var(--HoverColor);
   }
 `;
 

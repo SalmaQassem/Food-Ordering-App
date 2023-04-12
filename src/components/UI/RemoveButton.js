@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const RemoveButton = styled.button`
-  color: #ffbe33;
+  color: var(--MainColor);
   font-size: 15px;
   text-transform: capitalize;
   text-decoration: underline;

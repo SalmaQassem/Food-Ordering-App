@@ -111,7 +111,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  color: #ffbe33;
+  color: var(--MainColor);
   top: -8px;
   right: -2px;
 }
@@ -139,7 +139,7 @@
 .links-list li > a:hover,
 .links-list li > a.active,
 .side-list li > a:hover {
-  color: #ffbe33;
+  color: var(--MainColor);
 }
 .user-options {
   display: flex;

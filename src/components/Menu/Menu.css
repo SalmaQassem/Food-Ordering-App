@@ -35,13 +35,11 @@
   overflow: hidden;
   background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
   transition: 0.6s;
-  /*display: none;*/
   position: absolute;
   left: -100%;
   transform: scale(0);
 }
 .menu-items .menu-item.active {
-  /*display: block;*/
   position: static;
   transform: scale(1);
 }

@@ -14,6 +14,11 @@ body {
   scroll-behavior: smooth;
 }
 
+:root {
+  --MainColor: #ffbe33;
+  --HoverColor: #e69c00;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

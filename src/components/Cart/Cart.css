@@ -1,5 +1,4 @@
 #Cart {
-  width: 350px;
   height: 100vh;
   position: fixed;
   right: -350px;
@@ -10,11 +9,6 @@
   flex-direction: column;
   justify-content: space-between;
   transition: 0.3s ease-in-out;
-}
-@media (max-width: 576px) {
-  #Cart {
-    width: 250px;
-  }
 }
 #Cart.opened {
   right: 0;
@@ -36,6 +30,7 @@
   width: 100%;
   padding: 20px;
   overflow-y: scroll;
+  overflow-x: scroll;
 }
 .cart-content::-webkit-scrollbar {
   width: 13px;
@@ -62,6 +57,14 @@
 }
 .cart-content .cart-header > h4 {
   text-transform: capitalize;
+}
+@media (max-width: 576px) {
+  .cart-content .cart-header > h4 {
+    font-size: 15px;
+  }
+  .cart-content .cart-header > button {
+    font-size: 14px;
+  }
 }
 .cart-content .cart-body .items-list {
   display: flex;

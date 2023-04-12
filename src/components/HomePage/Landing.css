@@ -73,5 +73,5 @@
 .dots-list li.active {
   width: 20px;
   height: 20px;
-  background-color: #ffbe33;
+  background-color: var(--MainColor);
 }

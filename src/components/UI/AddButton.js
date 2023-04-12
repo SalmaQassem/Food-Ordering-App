@@ -8,13 +8,13 @@ const AddButton = styled.button`
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  background-color: #ffbe33;
+  background-color: var(--MainColor);
   color: #fff;
   border: none;
   cursor: pointer;
 
   &:hover {
-    background-color: #e69c00;
+    background-color: var(--HoverColor);
   }
 `;
 
