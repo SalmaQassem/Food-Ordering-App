@@ -1,4 +1,5 @@
 import "./Landing.css";
+import React from "react";
 import Container from "../UI/Container";
 import Button from "../UI/Button";
 
@@ -34,4 +35,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default React.memo(Landing);

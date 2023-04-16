@@ -1,4 +1,5 @@
 import "./Offers.css";
+import React from "react";
 import offers1 from "../../images/o1.webp";
 import offers2 from "../../images/o2.webp";
 import Container from "../UI/Container";
@@ -47,4 +48,4 @@ const Offers = () => {
   );
 };
 
-export default Offers;
+export default React.memo(Offers);

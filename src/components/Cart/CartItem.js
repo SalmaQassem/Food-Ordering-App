@@ -1,18 +1,19 @@
 import "./CartItem.css";
+import { useCallback } from "react";
 import RemoveButton from "../UI/RemoveButton";
 
 const CartItem = (props) => {
-  const onClickIncrease = () => {
+  const onClickIncrease = useCallback(() => {
     props.onAddItem(props.data);
-  };
+  }, [props]);
 
-  const onClickDecrease = () => {
+  const onClickDecrease = useCallback(() => {
     props.onRemoveItem(props.data, "DEC");
-  };
+  }, [props]);
 
-  const onClickRemoveHandler = () => {
+  const onClickRemoveHandler = useCallback(() => {
     props.onRemoveItem(props.data, "REMOVE");
-  };
+  }, [props]);
 
   return (
     <div className="cart-item">

@@ -1,9 +1,8 @@
 import "./NavBar.css";
-import { useContext } from "react";
+import { useContext, useCallback } from "react";
 import CartContext from "../../CartContext/CartContext";
 import Container from "../UI/Container";
 import Button from "../UI/Button";
-import Cart from "../Cart/Cart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -16,9 +15,9 @@ const NavBar = () => {
   const context = useContext(CartContext);
 
   const [isTogglerOpened, setIsTogglerOpened] = useState(false);
-  const onClickTogglerHandler = () => {
+  const onClickTogglerHandler = useCallback(() => {
     setIsTogglerOpened(!isTogglerOpened);
-  };
+  }, [isTogglerOpened]);
 
   useEffect(() => {
     if (isTogglerOpened) {
@@ -36,10 +35,10 @@ const NavBar = () => {
     }
   }, [isTogglerOpened]);
 
-  const onCartClickHandler = () => {
+  const onCartClickHandler = useCallback(() => {
     document.getElementById("Cart").classList.add("opened");
     document.querySelector(".cart-overlay").classList.add("opened");
-  };
+  }, []);
 
   return (
     <div className="navbar">

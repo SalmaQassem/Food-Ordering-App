@@ -2,26 +2,32 @@ import "./Cart.css";
 import { Fragment } from "react";
 import Button from "../UI/Button";
 import RemoveButton from "../UI/RemoveButton";
-import { useContext } from "react";
+import { useContext, useCallback } from "react";
 import CartContext from "../../CartContext/CartContext";
 import CartItem from "./CartItem";
 
 const Cart = () => {
   let context = useContext(CartContext);
-  const onAddItemHandler = (item) => {
-    context.addItems(item);
-  };
-  const onRemoveItemHandler = (item, type) => {
-    context.removeItems(item, type);
-  };
-  const onRemoveAllHandler = () => {
+  const onAddItemHandler = useCallback(
+    (item) => {
+      context.addItems(item);
+    },
+    [context]
+  );
+  const onRemoveItemHandler = useCallback(
+    (item, type) => {
+      context.removeItems(item, type);
+    },
+    [context]
+  );
+  const onRemoveAllHandler = useCallback(() => {
     context.removeItems(context.items, "REMOVEALL");
-  };
+  }, [context]);
 
-  const onCLickCancelHandler = () => {
+  const onCLickCancelHandler = useCallback(() => {
     document.getElementById("Cart").classList.remove("opened");
     document.querySelector(".cart-overlay").classList.remove("opened");
-  };
+  }, []);
 
   return (
     <Fragment>

@@ -7,46 +7,54 @@
   font-family: "DancingScript-Regular";
   src: local("DancingScriptRegular"),
     url("./fonts/DancingScript-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "DancingScript-Medium";
   src: local("DancingScriptMedium"),
     url("./fonts/DancingScript-Medium.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "DancingScript-SemiBold";
   src: local("DancingScriptSemiBold"),
     url("./fonts/DancingScript-SemiBold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "DancingScript-Bold";
   src: local("DancingScriptBold"),
     url("./fonts/DancingScript-Bold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "OpenSans-Regular";
   src: local("OpenSansRegular"),
     url("./fonts/OpenSans-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "OpenSans-Medium";
   src: local("OpenSansMedium"),
     url("./fonts/OpenSans-Medium.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "OpenSans-SemiBold";
   src: local("OpenSansSemiBold"),
     url("./fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "OpenSans-Bold";
   src: local("OpenSansBold"),
     url("./fonts/OpenSans-Bold.ttf") format("truetype");
+  font-display: swap;
 }
