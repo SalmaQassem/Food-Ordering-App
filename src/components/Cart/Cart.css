@@ -56,11 +56,12 @@
   align-items: center;
   justify-content: space-between;
 }
-.cart-content .cart-header > h4 {
+.cart-content .cart-header > h2 {
   text-transform: capitalize;
+  font-size: 16px;
 }
 @media (max-width: 576px) {
-  .cart-content .cart-header > h4 {
+  .cart-content .cart-header > h2 {
     font-size: 15px;
   }
   .cart-content .cart-header > button {
@@ -83,19 +84,19 @@
   justify-content: space-between;
   align-items: start;
 }
-.checkout .checkout-content .total h4,
-.checkout .checkout-content .total h5 {
+.checkout .checkout-content .total h2,
+.checkout .checkout-content .total p {
   text-transform: capitalize;
   text-align: start;
 }
-.checkout .checkout-content .total h4 {
+.checkout .checkout-content .total h2 {
   font-size: 14px;
 }
-.checkout .checkout-content .total h5 {
+.checkout .checkout-content .total p {
   font-size: 12px;
   color: #ffbe33;
 }
-.checkout .checkout-content > h4 {
+.checkout .checkout-content > h2 {
   font-size: 18px;
 }
 .checkout .checkout-buttons {

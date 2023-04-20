@@ -3,6 +3,7 @@ import { useContext, useState, useCallback, useEffect } from "react";
 import CartContext from "../../CartContext/CartContext";
 import Container from "../UI/Container";
 import AddButton from "../UI/AddButton";
+import Button from "../UI/Button";
 import { storage } from "../../firebase/firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -102,7 +103,7 @@ const Menu = () => {
     <section id="Menu">
       <Container>
         <div className="heading">
-          <h2>our menu</h2>
+          <h3>our menu</h3>
         </div>
         <ul className="menu-filters">
           <li className="active" onClick={onClickFilterHandler}>
@@ -131,11 +132,11 @@ const Menu = () => {
                     <img src={item.imageUrl} alt="" />
                   </div>
                   <div className="item-desc">
-                    <h5>{item.name}</h5>
+                    <h4>{item.name}</h4>
                     <p>{item.description}</p>
                     <div className="price">
-                      <h6>${item.price}</h6>
-                      <AddButton type="submit">
+                      <h5>${item.price}</h5>
+                      <AddButton type="submit" aria-label="add">
                         <FontAwesomeIcon icon={faCartShopping} />
                       </AddButton>
                     </div>
@@ -144,6 +145,9 @@ const Menu = () => {
               );
             })}
         </div>
+        <Button className="viewBtn" href="#">
+          view more
+        </Button>
       </Container>
     </section>
   );

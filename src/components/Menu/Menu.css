@@ -1,9 +1,12 @@
-.heading h2 {
+#Menu {
+  padding-bottom: 90px;
+}
+#Menu .heading h3 {
   font-family: "DancingScript-Bold", cursive;
   font-size: 40px;
   text-transform: capitalize;
 }
-.menu-filters {
+#Menu .menu-filters {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,17 +15,17 @@
   list-style: none;
   overflow: hidden;
 }
-.menu-filters li {
+#Menu .menu-filters li {
   padding: 7px 25px;
   border-radius: 25px;
   text-transform: capitalize;
   cursor: pointer;
 }
-.menu-filters li.active {
+#Menu .menu-filters li.active {
   color: #fff;
-  background-color: #222831;
+  background-color: var(--NavyColor);
 }
-.menu-items {
+#Menu .menu-items {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -30,38 +33,38 @@
   position: relative;
   overflow: hidden;
 }
-.menu-items .menu-item {
+#Menu .menu-items .menu-item {
   border-radius: 15px;
   overflow: hidden;
-  background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
+  background: linear-gradient(to bottom, #f1f2f3 25px, var(--NavyColor) 25px);
   transition: 0.6s;
   position: absolute;
   left: -100%;
   transform: scale(0);
 }
-.menu-items .menu-item.active {
+#Menu .menu-items .menu-item.active {
   position: static;
   transform: scale(1);
 }
 @media (max-width: 576px) {
-  .menu-items .menu-item {
+  #Menu .menu-items .menu-item {
     max-width: 100%;
     flex: 100%;
   }
 }
 @media (min-width: 576px) {
-  .menu-items .menu-item {
+  #Menu .menu-items .menu-item {
     max-width: calc((100% - 30px) / 2);
     flex: calc((100% - 30px) / 2);
   }
 }
 @media (min-width: 992px) {
-  .menu-items .menu-item {
+  #Menu .menu-items .menu-item {
     max-width: calc((100% - 60px) / 3);
     flex: calc((100% - 60px) / 3);
   }
 }
-.menu-items .menu-item .menu-image {
+#Menu .menu-items .menu-item .menu-image {
   width: 100%;
   padding: 25px;
   display: flex;
@@ -70,35 +73,39 @@
   border-radius: 0 0 0 45px;
   background-color: #f1f2f3;
 }
-.menu-items .menu-item .menu-image img {
+#Menu .menu-items .menu-item .menu-image img {
   width: 145px;
   height: 145px;
   transition: 0.2s;
 }
-.menu-items .menu-item .menu-image img:hover {
+#Menu .menu-items .menu-item .menu-image img:hover {
   transform: scale(1.1);
 }
-.menu-items .menu-item .item-desc {
+#Menu .menu-items .menu-item .item-desc {
   padding: 25px;
   text-align: start;
   color: #fff;
 }
-.menu-items .menu-item .item-desc h5 {
+#Menu .menu-items .menu-item .item-desc h4 {
   margin-bottom: 8px;
   font-size: 20px;
   text-transform: capitalize;
 }
-.menu-items .menu-item .item-desc p {
+#Menu .menu-items .menu-item .item-desc p {
   margin-bottom: 16px;
   font-size: 15px;
 }
-.menu-items .menu-item .item-desc .price {
+#Menu .menu-items .menu-item .item-desc .price {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu-items .menu-item .item-desc .price h6 {
+#Menu .menu-items .menu-item .item-desc .price h5 {
   font-size: 16px;
   font-weight: 400;
   margin: 10px 0 8px;
+}
+#Menu .viewBtn {
+  padding: 10px 55px;
+  margin: 45px 0 0 0;
 }

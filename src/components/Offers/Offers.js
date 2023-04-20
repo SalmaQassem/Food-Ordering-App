@@ -18,9 +18,9 @@ const Offers = () => {
             </div>
             <div className="item-description">
               <h2>tasty thursdays</h2>
-              <h4>
+              <h3>
                 <span>20%</span> off
-              </h4>
+              </h3>
               <Button className="offer-btn">
                 order now
                 <FontAwesomeIcon icon={faCartShopping} />
@@ -33,9 +33,9 @@ const Offers = () => {
             </div>
             <div className="item-description">
               <h2>pizza days</h2>
-              <h4>
+              <h3>
                 <span>15%</span> off
-              </h4>
+              </h3>
               <Button className="offer-btn">
                 order now
                 <FontAwesomeIcon icon={faCartShopping} />

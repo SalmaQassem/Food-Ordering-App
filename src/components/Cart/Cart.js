@@ -35,7 +35,7 @@ const Cart = () => {
       <section id="Cart">
         <div className="cart-content">
           <div className="cart-header">
-            <h4>shopping cart</h4>
+            <h2>shopping cart</h2>
             <RemoveButton onClick={onRemoveAllHandler}>remove all</RemoveButton>
           </div>
           <div className="cart-body">
@@ -57,10 +57,10 @@ const Cart = () => {
         <div className="checkout">
           <div className="checkout-content">
             <div className="total">
-              <h4>sub-total</h4>
-              <h5>{context.totalAmount} items</h5>
+              <h2>sub-total</h2>
+              <p>{context.totalAmount} items</p>
             </div>
-            <h4>${context.totalPrice}</h4>
+            <h2>${context.totalPrice}</h2>
           </div>
           <div className="checkout-buttons">
             <Button onClick={onCLickCancelHandler}>cancel</Button>

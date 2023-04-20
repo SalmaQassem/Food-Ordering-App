@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage/HomePage";
 import Cart from "./components/Cart/Cart";
 import Offers from "./components/Offers/Offers";
 import Menu from "./components/Menu/Menu";
+import About from "./components/About/About";
 import "./fonts/DancingScript-Regular.ttf";
 import "./fonts/DancingScript-Medium.ttf";
 import "./fonts/DancingScript-SemiBold.ttf";
@@ -17,6 +18,7 @@ function App() {
         <Cart />
         <Offers />
         <Menu />
+        <About />
       </div>
     </CartProvider>
   );
