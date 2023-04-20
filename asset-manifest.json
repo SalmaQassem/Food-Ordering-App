@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/Food-Ordering-App/static/css/main.82682abb.css",
-    "main.js": "/Food-Ordering-App/static/js/main.9230521c.js",
+    "main.css": "/Food-Ordering-App/static/css/main.ed3a85bf.css",
+    "main.js": "/Food-Ordering-App/static/js/main.8401aa85.js",
     "static/js/787.9643ecdb.chunk.js": "/Food-Ordering-App/static/js/787.9643ecdb.chunk.js",
+    "static/media/about-img.webp": "/Food-Ordering-App/static/media/about-img.8bad30ea401823bbbd50.webp",
     "static/media/OpenSans-Medium.ttf": "/Food-Ordering-App/static/media/OpenSans-Medium.a4894b36b47378c77c5f.ttf",
     "static/media/OpenSans-Regular.ttf": "/Food-Ordering-App/static/media/OpenSans-Regular.77c09223204154ae8d43.ttf",
     "static/media/OpenSans-Bold.ttf": "/Food-Ordering-App/static/media/OpenSans-Bold.fa428cdd2e334e2be904.ttf",
@@ -15,12 +16,12 @@
     "static/media/o2.webp": "/Food-Ordering-App/static/media/o2.006c89a97b01f40805ba.webp",
     "static/media/o1.webp": "/Food-Ordering-App/static/media/o1.3dad522578b867aaff03.webp",
     "index.html": "/Food-Ordering-App/index.html",
-    "main.82682abb.css.map": "/Food-Ordering-App/static/css/main.82682abb.css.map",
-    "main.9230521c.js.map": "/Food-Ordering-App/static/js/main.9230521c.js.map",
+    "main.ed3a85bf.css.map": "/Food-Ordering-App/static/css/main.ed3a85bf.css.map",
+    "main.8401aa85.js.map": "/Food-Ordering-App/static/js/main.8401aa85.js.map",
     "787.9643ecdb.chunk.js.map": "/Food-Ordering-App/static/js/787.9643ecdb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82682abb.css",
-    "static/js/main.9230521c.js"
+    "static/css/main.ed3a85bf.css",
+    "static/js/main.8401aa85.js"
   ]
 }
