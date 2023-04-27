@@ -50,8 +50,8 @@
   font-size: 14px;
 }
 .landing-btn {
-  padding: 10px 45px !important;
-  margin: 10px 0 0 0 !important;
+  padding: 10px 45px;
+  margin-top: 10px;
 }
 .dots-list {
   display: flex;

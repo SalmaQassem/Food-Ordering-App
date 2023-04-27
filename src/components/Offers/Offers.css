@@ -1,5 +1,5 @@
 #Offers {
-  padding: 45px 0 90px 0;
+  padding: 45px 0 0 0;
   background-color: #fff;
 }
 .offers-items {
@@ -94,7 +94,6 @@
 }
 .item-description .offer-btn {
   padding: 10px 30px;
-  margin: 0;
 }
 .item-description .offer-btn svg {
   margin-left: 5px;

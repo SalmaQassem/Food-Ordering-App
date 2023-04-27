@@ -9,36 +9,21 @@ import {
   faCartShopping,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const context = useContext(CartContext);
-
   const [isTogglerOpened, setIsTogglerOpened] = useState(false);
-  const onClickTogglerHandler = useCallback(() => {
-    setIsTogglerOpened(!isTogglerOpened);
-  }, [isTogglerOpened]);
 
-  useEffect(() => {
-    if (isTogglerOpened) {
-      document
-        .querySelector(".navbar-items .collapse-menu")
-        .classList.add("opened");
-      document.querySelector(".navbar-items .toggler").classList.add("opened");
-    } else {
-      document
-        .querySelector(".navbar-items .collapse-menu")
-        .classList.remove("opened");
-      document
-        .querySelector(".navbar-items .toggler")
-        .classList.remove("opened");
-    }
-  }, [isTogglerOpened]);
+  const onClickTogglerHandler = useCallback(() => {
+    setIsTogglerOpened((prevToggler) => {
+      return !prevToggler;
+    });
+  }, []);
 
   const onCartClickHandler = useCallback(() => {
-    document.getElementById("Cart").classList.add("opened");
-    document.querySelector(".cart-overlay").classList.add("opened");
-  }, []);
+    props.cartOpened();
+  }, [props]);
 
   return (
     <div className="navbar">
@@ -47,12 +32,19 @@ const NavBar = () => {
           <a href="#Home" className="logo">
             <span>feane</span>
           </a>
-          <div className="toggler" onClick={onClickTogglerHandler}>
+          <div
+            className={isTogglerOpened ? "toggler opened" : "toggler"}
+            onClick={onClickTogglerHandler}
+          >
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <div className="collapse-menu">
+          <div
+            className={
+              isTogglerOpened ? "collapse-menu opened" : "collapse-menu"
+            }
+          >
             <ul className="links-list">
               <li>
                 <a href="#Home">home</a>

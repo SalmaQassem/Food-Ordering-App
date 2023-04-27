@@ -1,10 +1,5 @@
 #Menu {
-  padding-bottom: 90px;
-}
-#Menu .heading h3 {
-  font-family: "DancingScript-Bold", cursive;
-  font-size: 40px;
-  text-transform: capitalize;
+  padding: var(--SectionPadding);
 }
 #Menu .menu-filters {
   display: flex;
@@ -107,5 +102,5 @@
 }
 #Menu .viewBtn {
   padding: 10px 55px;
-  margin: 45px 0 0 0;
+  margin-top: 45px;
 }

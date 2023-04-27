@@ -1,5 +1,5 @@
 #About {
-  padding: 90px 0;
+  padding: var(--SectionPadding);
   background-color: var(--NavyColor);
 }
 .about-box {
@@ -36,17 +36,11 @@
     order: 1;
   }
 }
-.about-box .about-text h2 {
-  font-family: "DancingScript-Bold", cursive;
-  font-size: 40px;
-  text-transform: capitalize;
-  line-height: 1.2;
-}
 .about-box .about-text p {
   font-family: "OpenSans-Regular", sans-serif;
   margin: 15px 0;
 }
 .about-box .about-text a {
   padding: 10px 45px;
-  margin: 15px 0 0 0;
+  margin-top: 15px;
 }

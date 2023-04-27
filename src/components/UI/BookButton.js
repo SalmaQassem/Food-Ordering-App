@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
-const Button = styled.a`
+const BookButton = styled.button`
   display: inline-block;
+  padding: 10px 55px;
+  margin-top: 15px;
   background-color: var(--MainColor);
   color: #fff;
+  font-family: "OpenSans-Regular", sans-serif;
   border-radius: 45px;
-  text-transform: capitalize;
-  text-decoration: none;
+  border: none;
+  line-height: inherit;
+  text-transform: uppercase;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
@@ -16,4 +20,4 @@ const Button = styled.a`
   }
 `;
 
-export default Button;
+export default BookButton;

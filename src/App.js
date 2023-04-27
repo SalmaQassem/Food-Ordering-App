@@ -1,10 +1,10 @@
 import "./App.css";
 import CartProvider from "./CartContext/CartProvider";
 import HomePage from "./components/HomePage/HomePage";
-import Cart from "./components/Cart/Cart";
 import Offers from "./components/Offers/Offers";
 import Menu from "./components/Menu/Menu";
 import About from "./components/About/About";
+import BookTable from "./components/BookTable/BookTable";
 import "./fonts/DancingScript-Regular.ttf";
 import "./fonts/DancingScript-Medium.ttf";
 import "./fonts/DancingScript-SemiBold.ttf";
@@ -15,10 +15,10 @@ function App() {
     <CartProvider>
       <div className="App">
         <HomePage />
-        <Cart />
         <Offers />
         <Menu />
         <About />
+        <BookTable />
       </div>
     </CartProvider>
   );

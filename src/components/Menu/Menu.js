@@ -2,6 +2,7 @@ import "./Menu.css";
 import { useContext, useState, useCallback, useEffect } from "react";
 import CartContext from "../../CartContext/CartContext";
 import Container from "../UI/Container";
+import Header from "../UI/Header";
 import AddButton from "../UI/AddButton";
 import Button from "../UI/Button";
 import { storage } from "../../firebase/firebase";
@@ -10,9 +11,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Menu = () => {
+  const context = useContext(CartContext);
+  const [isActive, setIsActive] = useState("f1");
+  const [activeCategory, setActiveCategory] = useState("all");
   const [error, setError] = useState();
-  const [files, setFiles] = useState([]);
   const [menu, setMenu] = useState([]);
+  const [files, setFiles] = useState([]);
+
+  const onClickFilterHandler = useCallback((e) => {
+    setIsActive(e.target.id);
+    setActiveCategory(e.target.textContent);
+  }, []);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -67,9 +76,6 @@ const Menu = () => {
     fetchMenuHandler();
   }, [fetchMenuHandler]);
 
-  const context = useContext(CartContext);
-  const [activeCategory, setActiveCategory] = useState("all");
-
   const onFormSubmitHandler = useCallback(
     (e) => {
       e.preventDefault();
@@ -90,29 +96,48 @@ const Menu = () => {
     [context, menu]
   );
 
-  const onClickFilterHandler = useCallback((e) => {
-    const categories = document.querySelectorAll("#Menu .menu-filters li");
-    for (let i = 0; i < categories.length; i++) {
-      categories[i].classList.remove("active");
-    }
-    e.target.classList.add("active");
-    setActiveCategory(e.target.textContent);
-  }, []);
-
   return (
     <section id="Menu">
       <Container>
         <div className="heading">
-          <h3>our menu</h3>
+          <Header>our menu</Header>
         </div>
         <ul className="menu-filters">
-          <li className="active" onClick={onClickFilterHandler}>
+          <li
+            id="f1"
+            className={isActive === "f1" ? "active" : ""}
+            onClick={onClickFilterHandler}
+          >
             all
           </li>
-          <li onClick={onClickFilterHandler}>burger</li>
-          <li onClick={onClickFilterHandler}>pizza</li>
-          <li onClick={onClickFilterHandler}>pasta</li>
-          <li onClick={onClickFilterHandler}>fries</li>
+          <li
+            id="f2"
+            className={isActive === "f2" ? "active" : ""}
+            onClick={onClickFilterHandler}
+          >
+            burger
+          </li>
+          <li
+            id="f3"
+            className={isActive === "f3" ? "active" : ""}
+            onClick={onClickFilterHandler}
+          >
+            pizza
+          </li>
+          <li
+            id="f4"
+            className={isActive === "f4" ? "active" : ""}
+            onClick={onClickFilterHandler}
+          >
+            pasta
+          </li>
+          <li
+            id="f5"
+            className={isActive === "f5" ? "active" : ""}
+            onClick={onClickFilterHandler}
+          >
+            fries
+          </li>
         </ul>
         <div className="menu-items">
           {!error &&

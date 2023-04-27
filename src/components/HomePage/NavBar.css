@@ -133,7 +133,8 @@
     margin: 5px 0;
   }
 }
-.side-list li > a {
+.side-list li > a,
+.user-options > a {
   margin: 0 10px;
 }
 .links-list li > a:hover,
@@ -150,4 +151,7 @@
   .user-options {
     margin-top: 15px;
   }
+}
+.user-options > a {
+  padding: 8px 30px;
 }

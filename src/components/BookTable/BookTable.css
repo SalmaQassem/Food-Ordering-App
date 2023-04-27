@@ -1,0 +1,185 @@
+#Book {
+  padding: var(--SectionPadding);
+}
+#Book .book-header {
+  margin-bottom: 25px;
+  text-align: left;
+}
+#Book .book-table {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  #Book .book-table {
+    flex-direction: column;
+    gap: 45px;
+  }
+}
+#Book .book-table .book-form {
+  text-align: start;
+  flex: 1;
+}
+#Book .book-table .book-form input,
+#Book .book-table .book-form .select {
+  width: 100%;
+  height: 50px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #999;
+  outline: none;
+  color: #000;
+  font-size: 16px;
+  border-radius: 5px;
+  font-family: "OpenSans-Regular", sans-serif;
+}
+#Book .book-table .book-form .input-container {
+  position: relative;
+}
+#Book .book-table .book-form .input-container input {
+  padding-right: 12px;
+}
+#Book .book-table .book-form .input-container input::placeholder {
+  color: #222222;
+  text-transform: capitalize;
+}
+#Book
+  .book-table
+  .book-form
+  .input-container
+  input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+#Book
+  .book-table
+  .book-form
+  .input-container
+  input[type="date"]::-webkit-datetime-edit-day-field:focus,
+#Book
+  .book-table
+  .book-form
+  .input-container
+  input[type="date"]::-webkit-datetime-edit-month-field:focus,
+#Book
+  .book-table
+  .book-form
+  .input-container
+  input[type="date"]::-webkit-datetime-edit-year-field:focus {
+  background-color: transparent;
+  outline: none;
+}
+#Book .book-table .book-form .input-container input.invalid,
+#Book .book-table .book-form .select.invalid {
+  border-color: red;
+}
+#Book .book-table .book-form .input-container input.invalid::placeholder {
+  color: red;
+}
+#Book
+  .book-table
+  .book-form
+  .input-container
+  input[type="date"].invalid::-webkit-datetime-edit,
+#Book
+  .book-table
+  .book-form
+  .input-container
+  input[type="date"].invalid::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(50%) sepia(100%) saturate(10000%);
+}
+#Book .book-table .book-form .input-container .alert-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 25px;
+  right: 12px;
+  transform: translateY(-50%);
+  display: none;
+  border-radius: 50%;
+  color: red;
+  font-size: 13px;
+  font-weight: bold;
+  border: 2px solid red;
+}
+#Book .book-table .book-form .input-container input.invalid + .alert-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Book .book-table .book-form .select {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 30px;
+  cursor: pointer;
+}
+#Book .book-table .book-form .select.invalid {
+  color: red;
+}
+#Book .book-table .book-form .select::after {
+  content: "";
+  width: 3.5px;
+  height: 3.5px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  border-top: 2px solid #999;
+  border-left: 2px solid #999;
+  transform: translateY(-50%) rotate(45deg);
+  transition: 0.15s ease-in-out;
+}
+#Book .book-table .book-form .select.opened::after {
+  transform: rotate(225deg);
+}
+#Book .book-table .book-form .select.invalid::after {
+  border-color: red;
+}
+#Book .book-table .book-form .select ul {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  margin-top: 4px;
+  list-style: none;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid rgba(68, 68, 68, 0.11);
+  border-radius: 5px;
+  opacity: 0;
+  overflow: hidden;
+  transform: scale(0.75) translateY(-21px);
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+}
+#Book .book-table .book-form .select.opened ul {
+  height: fit-content;
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+#Book .book-table .book-form .select ul li {
+  padding: 0 29px 0 18px;
+  color: #000;
+  line-height: 40px;
+  font-family: "OpenSans-Regular", sans-serif;
+}
+#Book .book-table .book-form .select ul li:first-of-type {
+  color: #999;
+  cursor: default;
+}
+#Book .book-table .book-form .select ul li.selected,
+#Book .book-table .book-form .select ul li:not(:first-child):hover {
+  background-color: #f6f6f6;
+}
+#Book .book-table .book-form .select ul li.selected {
+  font-family: "OpenSans-Bold", sans-serif;
+}
+#Book .book-table .book-form .feedback {
+  color: red;
+  font-size: 15px;
+  transform: translateY(-20px);
+}
+#Book .book-table .map {
+  flex: 1;
+}

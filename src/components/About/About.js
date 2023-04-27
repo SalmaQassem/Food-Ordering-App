@@ -1,5 +1,6 @@
 import "./About.css";
 import Container from "../UI/Container";
+import Header from "../UI/Header";
 import Button from "../UI/Button";
 import AboutImg from "../../images/about-img.webp";
 
@@ -12,7 +13,7 @@ const About = () => {
             <img src={AboutImg} alt=""></img>
           </div>
           <div className="about-text">
-            <h2>we are feane</h2>
+            <Header>we are feane</Header>
             <p>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by

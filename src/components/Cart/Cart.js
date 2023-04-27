@@ -6,7 +6,7 @@ import { useContext, useCallback } from "react";
 import CartContext from "../../CartContext/CartContext";
 import CartItem from "./CartItem";
 
-const Cart = () => {
+const Cart = (props) => {
   let context = useContext(CartContext);
   const onAddItemHandler = useCallback(
     (item) => {
@@ -24,15 +24,18 @@ const Cart = () => {
     context.removeItems(context.items, "REMOVEALL");
   }, [context]);
 
-  const onCLickCancelHandler = useCallback(() => {
-    document.getElementById("Cart").classList.remove("opened");
-    document.querySelector(".cart-overlay").classList.remove("opened");
-  }, []);
+  const onClickCancelHandler = useCallback(() => {
+    props.cartClosed();
+  }, [props]);
 
   return (
     <Fragment>
-      <div className="cart-overlay"></div>
-      <section id="Cart">
+      <div
+        className={
+          props.cartState === true ? "cart-overlay opened" : "cart-overlay"
+        }
+      ></div>
+      <section id="Cart" className={props.cartState === true ? "opened" : ""}>
         <div className="cart-content">
           <div className="cart-header">
             <h2>shopping cart</h2>
@@ -63,7 +66,7 @@ const Cart = () => {
             <h2>${context.totalPrice}</h2>
           </div>
           <div className="checkout-buttons">
-            <Button onClick={onCLickCancelHandler}>cancel</Button>
+            <Button onClick={onClickCancelHandler}>cancel</Button>
             <Button>checkout</Button>
           </div>
         </div>
