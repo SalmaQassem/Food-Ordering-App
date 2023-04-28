@@ -63,31 +63,30 @@
   .book-table
   .book-form
   .input-container
-  input[type="date"]::-webkit-datetime-edit-day-field:focus,
+  input[type="date"].invalid::-webkit-calendar-picker-indicator,
 #Book
   .book-table
   .book-form
   .input-container
-  input[type="date"]::-webkit-datetime-edit-month-field:focus,
-#Book
-  .book-table
-  .book-form
-  .input-container
-  input[type="date"]::-webkit-datetime-edit-year-field:focus {
-  background-color: transparent;
-  outline: none;
+  input[type="date"].invalid::-webkit-datetime-edit {
+  filter: invert(100%) brightness(50%) sepia(100%) saturate(10000%);
 }
 #Book
   .book-table
   .book-form
   .input-container
-  input[type="date"].invalid::-webkit-datetime-edit,
+  input[type="date"].invalid::-webkit-datetime-edit-year-field,
 #Book
   .book-table
   .book-form
   .input-container
-  input[type="date"].invalid::-webkit-calendar-picker-indicator {
-  filter: invert(100%) brightness(50%) sepia(100%) saturate(10000%);
+  input[type="date"].invalid::-webkit-datetime-edit-month-field,
+#Book
+  .book-table
+  .book-form
+  .input-container
+  input[type="date"].invalid::-webkit-datetime-edit-day-field {
+  background-color: initial;
 }
 #Book .book-table .book-form .input-container .alert-icon {
   width: 18px;
@@ -187,4 +186,6 @@
 
 #Book .book-table .map {
   flex: 1;
+  position: relative;
+  z-index: 1;
 }
