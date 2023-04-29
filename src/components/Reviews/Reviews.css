@@ -1,0 +1,20 @@
+#Reviews {
+  padding: var(--SectionPadding);
+  padding-top: 0;
+}
+#Reviews .reviews-header {
+  margin-bottom: 40px;
+}
+#Reviews .slider-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 45px;
+  position: relative;
+}
+#Reviews .slider-buttons .left-button,
+#Reviews .slider-buttons .right-button {
+  width: 45px !important;
+  height: 45px !important;
+}

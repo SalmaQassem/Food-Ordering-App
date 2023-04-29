@@ -56,7 +56,7 @@ const NavBar = (props) => {
                 <a href="#About">about</a>
               </li>
               <li>
-                <a href="#BookTable">book table</a>
+                <a href="#Book">book table</a>
               </li>
             </ul>
             <div className="user-options">
