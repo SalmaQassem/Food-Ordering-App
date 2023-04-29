@@ -1,0 +1,28 @@
+.social > a {
+  display: block;
+  color: #fff;
+  font-size: 38px !important;
+  line-height: 1;
+}
+.social .social-links,
+.social .social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social .social-links {
+  gap: 5px;
+  margin: 20px 0 10px 0;
+  cursor: pointer;
+}
+.social .social-links a {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--NavyColor);
+}
+.social .social-links a:hover {
+  color: var(--MainColor);
+}

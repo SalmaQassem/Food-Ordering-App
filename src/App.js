@@ -6,6 +6,7 @@ import Menu from "./components/Menu/Menu";
 import About from "./components/About/About";
 import BookTable from "./components/BookTable/BookTable";
 import Reviews from "./components/Reviews/Reviews";
+import Footer from "./components/Footer/Footer";
 import "./fonts/DancingScript-Regular.ttf";
 import "./fonts/DancingScript-Medium.ttf";
 import "./fonts/DancingScript-SemiBold.ttf";
@@ -21,6 +22,7 @@ function App() {
         <About />
         <BookTable />
         <Reviews />
+        <Footer />
       </div>
     </CartProvider>
   );
