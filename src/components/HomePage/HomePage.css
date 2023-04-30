@@ -3,17 +3,10 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url("../../images/hero-bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   overflow: hidden;
-}
-#Home .bg-Image {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  object-fit: cover;
-}
-#Home .bg-Image img {
-  width: 100%;
-  height: 100%;
 }

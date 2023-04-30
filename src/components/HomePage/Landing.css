@@ -10,18 +10,11 @@
     justify-content: start;
   }
 }
-.slider {
-  width: 100%;
-}
-.slider .slide {
-  width: 100%;
-}
 .text {
   width: 100%;
-  height: fit-content;
   text-align: start;
   color: #fff;
-  margin-bottom: 145px;
+  margin-bottom: 230px;
 }
 @media (min-width: 768px) {
   .text {
@@ -31,6 +24,7 @@
 @media (min-width: 992px) {
   .text {
     max-width: 50%;
+    margin-bottom: 185px;
   }
 }
 .text h1 {
@@ -53,24 +47,20 @@
   padding: 10px 45px;
   margin-top: 10px;
 }
-.dots-list {
-  display: flex;
-  align-items: center;
-  list-style: none;
+.carousel-dots {
+  align-items: center !important;
+  justify-content: start !important;
 }
-@media (max-width: 992px) {
-  .dots-list {
-    margin-top: 45px;
-  }
-}
-.dots-list li {
+.dots-item {
   width: 12px;
   height: 12px;
   margin: 10px 3px;
   border-radius: 50%;
+  border: none;
   background-color: #fff;
+  cursor: pointer;
 }
-.dots-list li.active {
+.dots-item.active {
   width: 20px;
   height: 20px;
   background-color: var(--MainColor);

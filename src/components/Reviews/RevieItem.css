@@ -39,6 +39,7 @@
 }
 .review-box .client-img img {
   width: 115px;
+  height: 115px;
   border: 5px solid var(--MainColor);
   border-radius: 100%;
 }
