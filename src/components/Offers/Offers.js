@@ -21,7 +21,7 @@ const Offers = () => {
               <h3>
                 <span>20%</span> off
               </h3>
-              <Button className="offer-btn">
+              <Button href="#Menu" aria-label="Menu Page" className="offer-btn">
                 order now
                 <FontAwesomeIcon icon={faCartShopping} />
               </Button>
@@ -36,7 +36,7 @@ const Offers = () => {
               <h3>
                 <span>15%</span> off
               </h3>
-              <Button className="offer-btn">
+              <Button href="#Menu" aria-label="Menu Page" className="offer-btn">
                 order now
                 <FontAwesomeIcon icon={faCartShopping} />
               </Button>

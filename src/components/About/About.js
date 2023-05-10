@@ -22,7 +22,9 @@ const About = () => {
               Ipsum, you need to be sure there isn't anything embarrassing
               hidden in the middle of text. All
             </p>
-            <Button>read more</Button>
+            <Button href="#Home" aria-label="About Page">
+              read more
+            </Button>
           </div>
         </div>
       </Container>

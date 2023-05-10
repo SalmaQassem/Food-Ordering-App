@@ -1,12 +1,17 @@
 import "./BookTable.css";
 import Container from "../UI/Container";
+import Overlay from "../UI/Overlay";
 import Header from "../UI/Header";
 import BookButton from "../UI/BookButton";
 import Map from "../Map/Map";
 import useInput from "../../hooks/useInput";
 import { useState, useCallback } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const BookTable = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isConfirm, setIsConfirm] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
 
   const {
@@ -77,6 +82,24 @@ const BookTable = () => {
     ) {
       return;
     }
+    //Send Data
+    /*const response = fetch(
+      "https://feane-751cb-default-rtdb.firebaseio.com/Bookings.json",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          Name: nameValue,
+          PhoneNumber: phoneValue,
+          Email: emailValue,
+          Date: dateValue,
+          NumberOfPersons: selectorValue,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );*/
+    setIsSubmitted(true);
     resetName();
     resetPhone();
     resetEmail();
@@ -91,9 +114,31 @@ const BookTable = () => {
     });
   }, [blurSelectorHandler]);
 
+  const confirmHandler = () => {
+    setIsConfirm(true);
+  };
   return (
     <section id="Book">
       <Container>
+        {isSubmitted && (
+          <div className={!isConfirm ? "confirm-box" : "confirm-box hide"}>
+            <Overlay />
+            <div className="confirm">
+              <div className="confirm-icon">
+                <FontAwesomeIcon icon={faCheck} />
+              </div>
+              <h3>success</h3>
+              <p>
+                Your booking has been confirmed.
+                <br />
+                Check your emails for details.
+              </p>
+              <BookButton className="confirm-btn" onClick={confirmHandler}>
+                ok
+              </BookButton>
+            </div>
+          </div>
+        )}
         <div className="book-header">
           <Header>book a table</Header>
         </div>
@@ -216,7 +261,9 @@ const BookTable = () => {
                 <p className="feedback">Date must be selected</p>
               )}
             </div>
-            <BookButton className="book-btn">book now</BookButton>
+            <BookButton className="book-btn" aria-label="book">
+              book now
+            </BookButton>
           </form>
           <div className="map">
             <Map />

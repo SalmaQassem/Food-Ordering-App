@@ -29,7 +29,7 @@ const NavBar = (props) => {
     <div className="navbar">
       <Container>
         <nav className="navbar-items">
-          <a href="#Home" className="logo">
+          <a href="#Home" aria-label="Home Page" className="logo">
             <span>feane</span>
           </a>
           <div
@@ -47,22 +47,30 @@ const NavBar = (props) => {
           >
             <ul className="links-list">
               <li>
-                <a href="#Home">home</a>
+                <a href="#Home" aria-label="Home Page">
+                  home
+                </a>
               </li>
               <li>
-                <a href="#Menu">menu</a>
+                <a href="#Menu" aria-label="Menu Page">
+                  menu
+                </a>
               </li>
               <li>
-                <a href="#About">about</a>
+                <a href="#About" aria-label="About Page">
+                  about
+                </a>
               </li>
               <li>
-                <a href="#Book">book table</a>
+                <a href="#Book" aria-label="BookTable Page">
+                  book table
+                </a>
               </li>
             </ul>
             <div className="user-options">
               <ul className="side-list">
                 <li>
-                  <a href="#Profile">
+                  <a href="#Profile" aria-label="Profile Page">
                     <FontAwesomeIcon icon={faUser} />
                   </a>
                 </li>
@@ -72,17 +80,23 @@ const NavBar = (props) => {
                     context.totalAmount > 0 ? context.totalAmount : ""
                   }
                 >
-                  <a href="#Cart" onClick={onCartClickHandler}>
+                  <a
+                    href="#Cart"
+                    aria-label="Cart Page"
+                    onClick={onCartClickHandler}
+                  >
                     <FontAwesomeIcon icon={faCartShopping} />
                   </a>
                 </li>
                 <li>
-                  <a href="#Search">
+                  <a href="#Search" aria-label="Search Page">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                   </a>
                 </li>
               </ul>
-              <Button href="#Shop">order online</Button>
+              <Button href="#Menu" aria-label="Order Button">
+                order online
+              </Button>
             </div>
           </div>
         </nav>

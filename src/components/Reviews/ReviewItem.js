@@ -4,7 +4,7 @@ const ReviewItem = (props) => {
     <div className="review-box">
       <div className="review">
         <p className="review-details">{props.item.text}</p>
-        <h6>{props.item.customerName}</h6>
+        <h4>{props.item.customerName}</h4>
         <p>{props.item.title}</p>
       </div>
       <div className="client-img">

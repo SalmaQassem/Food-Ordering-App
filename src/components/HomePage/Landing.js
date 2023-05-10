@@ -52,6 +52,7 @@ const Landing = () => {
     return (
       <button
         className={active ? "dots-item  active" : "dots-item  inactive"}
+        aria-label="dot"
         onClick={() => onClick()}
       ></button>
     );
@@ -93,7 +94,11 @@ const Landing = () => {
               <div className="text" key={item.id}>
                 <h1>{item.title}</h1>
                 <p>{item.description}</p>
-                <Button className="landing-btn" href="#Shop">
+                <Button
+                  href="#Menu"
+                  className="landing-btn"
+                  aria-label="Menu Page"
+                >
                   order now
                 </Button>
               </div>

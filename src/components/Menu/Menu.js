@@ -157,10 +157,10 @@ const Menu = () => {
                     <img src={item.imageUrl} alt="" />
                   </div>
                   <div className="item-desc">
-                    <h4>{item.name}</h4>
+                    <h3>{item.name}</h3>
                     <p>{item.description}</p>
                     <div className="price">
-                      <h5>${item.price}</h5>
+                      <h3>${item.price}</h3>
                       <AddButton type="submit" aria-label="add">
                         <FontAwesomeIcon icon={faCartShopping} />
                       </AddButton>
@@ -170,7 +170,7 @@ const Menu = () => {
               );
             })}
         </div>
-        <Button className="viewBtn" href="#">
+        <Button className="viewBtn" href="#Home">
           view more
         </Button>
       </Container>

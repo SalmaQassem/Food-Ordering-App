@@ -69,11 +69,16 @@ const Reviews = () => {
     } = rest;
     return (
       <div className="slider-buttons">
-        <AddButton className="left-button" onClick={() => previous()}>
+        <AddButton
+          className="left-button"
+          aria-label="add"
+          onClick={() => previous()}
+        >
           <FontAwesomeIcon icon={faChevronLeft} />
         </AddButton>
         <AddButton
           className="right-button"
+          aria-label="add"
           onClick={() => goToSlide(currentSlide + 1)}
         >
           <FontAwesomeIcon icon={faChevronRight} />

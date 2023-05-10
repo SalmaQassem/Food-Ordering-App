@@ -1,5 +1,6 @@
 import "./Cart.css";
 import { Fragment } from "react";
+import Overlay from "../UI/Overlay";
 import Button from "../UI/Button";
 import RemoveButton from "../UI/RemoveButton";
 import { useContext, useCallback } from "react";
@@ -30,15 +31,15 @@ const Cart = (props) => {
 
   return (
     <Fragment>
-      <div
+      <Overlay
         className={
           props.cartState === true ? "cart-overlay opened" : "cart-overlay"
         }
-      ></div>
+      ></Overlay>
       <section id="Cart" className={props.cartState === true ? "opened" : ""}>
         <div className="cart-content">
           <div className="cart-header">
-            <h2>shopping cart</h2>
+            <h1>shopping cart</h1>
             <RemoveButton onClick={onRemoveAllHandler}>remove all</RemoveButton>
           </div>
           <div className="cart-body">
@@ -60,10 +61,10 @@ const Cart = (props) => {
         <div className="checkout">
           <div className="checkout-content">
             <div className="total">
-              <h2>sub-total</h2>
+              <h1>sub-total</h1>
               <p>{context.totalAmount} items</p>
             </div>
-            <h2>${context.totalPrice}</h2>
+            <h1>${context.totalPrice}</h1>
           </div>
           <div className="checkout-buttons">
             <Button onClick={onClickCancelHandler}>cancel</Button>
