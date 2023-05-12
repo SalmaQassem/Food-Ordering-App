@@ -1,0 +1,19 @@
+#Menu .menu-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0 20px 0;
+  list-style: none;
+  overflow: hidden;
+}
+#Menu .menu-filters li {
+  padding: 7px 25px;
+  border-radius: 25px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+#Menu .menu-filters li.active {
+  color: #fff;
+  background-color: var(--NavyColor);
+}
