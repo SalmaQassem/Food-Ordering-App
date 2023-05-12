@@ -1,19 +1,22 @@
 import "./CartItem.css";
 import { useCallback } from "react";
+import { cartActions } from "../../store/cartSlice";
+import { useDispatch } from "react-redux";
 import RemoveButton from "../UI/RemoveButton";
 
 const CartItem = (props) => {
-  const onClickIncrease = useCallback(() => {
-    props.onAddItem(props.data);
-  }, [props]);
+  const dispatch = useDispatch();
+  const increaseHandler = useCallback(() => {
+    dispatch(cartActions.addItems(props.data));
+  }, [dispatch, props]);
 
   const onClickDecrease = useCallback(() => {
-    props.onRemoveItem(props.data, "DEC");
-  }, [props]);
+    dispatch(cartActions.decreaseItems(props.data));
+  }, [dispatch, props]);
 
   const onClickRemoveHandler = useCallback(() => {
-    props.onRemoveItem(props.data, "REMOVE");
-  }, [props]);
+    dispatch(cartActions.removeItems(props.data));
+  }, [dispatch, props]);
 
   return (
     <div className="cart-item">
@@ -23,11 +26,11 @@ const CartItem = (props) => {
       <p className="item-name">{props.data.name}</p>
       <div className="amount-buttons">
         <button onClick={onClickDecrease}>-</button>
-        <p className="amount">{props.data.amount}</p>
-        <button onClick={onClickIncrease}>+</button>
+        <p className="amount">{props.data.quantity}</p>
+        <button onClick={increaseHandler}>+</button>
       </div>
       <div className="item-price">
-        <p>${props.data.amount * props.data.price}</p>
+        <p>${props.data.totalPrice}</p>
         <RemoveButton onClick={onClickRemoveHandler}>remove</RemoveButton>
       </div>
     </div>

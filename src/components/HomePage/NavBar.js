@@ -1,6 +1,6 @@
 import "./NavBar.css";
-import { useContext, useCallback } from "react";
-import CartContext from "../../CartContext/CartContext";
+import { useCallback } from "react";
+import { useSelector } from "react-redux";
 import Container from "../UI/Container";
 import Button from "../UI/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +12,7 @@ import {
 import { useState } from "react";
 
 const NavBar = (props) => {
-  const context = useContext(CartContext);
+  const amount = useSelector((state) => state.cart.totalAmount);
   const [isTogglerOpened, setIsTogglerOpened] = useState(false);
 
   const onClickTogglerHandler = useCallback(() => {
@@ -74,12 +74,7 @@ const NavBar = (props) => {
                     <FontAwesomeIcon icon={faUser} />
                   </a>
                 </li>
-                <li
-                  className="cart"
-                  data-before={
-                    context.totalAmount > 0 ? context.totalAmount : ""
-                  }
-                >
+                <li className="cart" data-before={amount}>
                   <a
                     href="#Cart"
                     aria-label="Cart Page"

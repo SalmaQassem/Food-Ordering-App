@@ -3,27 +3,18 @@ import { Fragment } from "react";
 import Overlay from "../UI/Overlay";
 import Button from "../UI/Button";
 import RemoveButton from "../UI/RemoveButton";
-import { useContext, useCallback } from "react";
-import CartContext from "../../CartContext/CartContext";
+import { cartActions } from "../../store/cartSlice";
+import { useCallback } from "react";
 import CartItem from "./CartItem";
+import { useSelector, useDispatch } from "react-redux";
 
 const Cart = (props) => {
-  let context = useContext(CartContext);
-  const onAddItemHandler = useCallback(
-    (item) => {
-      context.addItems(item);
-    },
-    [context]
-  );
-  const onRemoveItemHandler = useCallback(
-    (item, type) => {
-      context.removeItems(item, type);
-    },
-    [context]
-  );
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
   const onRemoveAllHandler = useCallback(() => {
-    context.removeItems(context.items, "REMOVEALL");
-  }, [context]);
+    dispatch(cartActions.removeAll());
+  }, [dispatch]);
 
   const onClickCancelHandler = useCallback(() => {
     props.cartClosed();
@@ -44,16 +35,9 @@ const Cart = (props) => {
           </div>
           <div className="cart-body">
             <div className="items-list">
-              {context.items.length > 0 &&
-                context.items.map((item) => {
-                  return (
-                    <CartItem
-                      data={item}
-                      key={item.id}
-                      onAddItem={onAddItemHandler}
-                      onRemoveItem={onRemoveItemHandler}
-                    />
-                  );
+              {cart.items.length > 0 &&
+                cart.items.map((item) => {
+                  return <CartItem data={item} key={item.id} />;
                 })}
             </div>
           </div>
@@ -62,9 +46,9 @@ const Cart = (props) => {
           <div className="checkout-content">
             <div className="total">
               <h1>sub-total</h1>
-              <p>{context.totalAmount} items</p>
+              <p>{cart.totalAmount} items</p>
             </div>
-            <h1>${context.totalPrice}</h1>
+            <h1>${cart.totalPrice}</h1>
           </div>
           <div className="checkout-buttons">
             <Button onClick={onClickCancelHandler}>cancel</Button>

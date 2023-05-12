@@ -1,6 +1,7 @@
 import "./Menu.css";
-import { useContext, useState, useCallback, useEffect } from "react";
-import CartContext from "../../CartContext/CartContext";
+import { useState, useCallback, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cartSlice";
 import Container from "../UI/Container";
 import Header from "../UI/Header";
 import AddButton from "../UI/AddButton";
@@ -11,12 +12,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Menu = () => {
-  const context = useContext(CartContext);
   const [isActive, setIsActive] = useState("f1");
   const [activeCategory, setActiveCategory] = useState("all");
   const [error, setError] = useState();
   const [menu, setMenu] = useState([]);
   const [files, setFiles] = useState([]);
+  const dispatch = useDispatch();
 
   const onClickFilterHandler = useCallback((e) => {
     setIsActive(e.target.id);
@@ -63,7 +64,6 @@ const Menu = () => {
           description: data[key].description,
           price: data[key].price,
           category: data[key].category,
-          amount: data[key].amount,
         });
       }
       setMenu(loadedMenu);
@@ -86,14 +86,13 @@ const Menu = () => {
             imageUrl: menu[i].imageUrl,
             name: menu[i].name,
             price: menu[i].price,
-            amount: menu[i].amount,
           };
-          context.addItems(selectedItem);
+          dispatch(cartActions.addItems(selectedItem));
           break;
         }
       }
     },
-    [context, menu]
+    [menu, dispatch]
   );
 
   return (
