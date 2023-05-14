@@ -118,7 +118,11 @@ const NavBar = () => {
             <div className={classes.user}>
               <ul className={classes.sideList}>
                 <li>
-                  <Link to="/Food-Ordering-App/" aria-label="Profile Page">
+                  <Link
+                    to="/Food-Ordering-App/"
+                    aria-label="Profile Page"
+                    onClick={linkClickHandler}
+                  >
                     <FontAwesomeIcon icon={faUser} />
                   </Link>
                 </li>
@@ -128,12 +132,20 @@ const NavBar = () => {
                   </span>
                 </li>
                 <li>
-                  <Link to="/Food-Ordering-App/" aria-label="Search Page">
+                  <Link
+                    to="/Food-Ordering-App/"
+                    aria-label="Search Page"
+                    onClick={linkClickHandler}
+                  >
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                   </Link>
                 </li>
               </ul>
-              <Button to="Menu" aria-label="Order Button">
+              <Button
+                to="Menu"
+                aria-label="Order Button"
+                onClick={linkClickHandler}
+              >
                 order online
               </Button>
             </div>
