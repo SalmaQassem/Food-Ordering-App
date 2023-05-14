@@ -1,4 +1,4 @@
-#Menu .menu-items {
+.menuItems {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;

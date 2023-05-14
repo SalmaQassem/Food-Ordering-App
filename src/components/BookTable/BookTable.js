@@ -1,4 +1,4 @@
-import "./BookTable.css";
+import classes from "./BookTable.module.css";
 import Container from "../UI/Container";
 import Overlay from "../UI/Overlay";
 import Header from "../UI/Header";
@@ -83,7 +83,7 @@ const BookTable = () => {
       return;
     }
     //Send Data
-    /*const response = fetch(
+    const response = fetch(
       "https://feane-751cb-default-rtdb.firebaseio.com/Bookings.json",
       {
         method: "POST",
@@ -98,7 +98,7 @@ const BookTable = () => {
           "Content-Type": "application/json",
         },
       }
-    );*/
+    );
     setIsSubmitted(true);
     resetName();
     resetPhone();
@@ -118,124 +118,164 @@ const BookTable = () => {
     setIsConfirm(true);
   };
   return (
-    <section id="Book">
+    <section className={classes.book}>
       <Container>
         {isSubmitted && (
-          <div className={!isConfirm ? "confirm-box" : "confirm-box hide"}>
+          <div
+            className={
+              !isConfirm ? `${classes.box}` : `${classes.box} ${classes.hide}`
+            }
+          >
             <Overlay />
-            <div className="confirm">
-              <div className="confirm-icon">
+            <div className={classes.confirm}>
+              <div className={classes.icon}>
                 <FontAwesomeIcon icon={faCheck} />
               </div>
-              <h3>success</h3>
-              <p>
+              <h3 className={classes.h3}>success</h3>
+              <p className={classes.p}>
                 Your booking has been confirmed.
                 <br />
                 Check your emails for details.
               </p>
-              <BookButton className="confirm-btn" onClick={confirmHandler}>
+              <BookButton className={classes.button} onClick={confirmHandler}>
                 ok
               </BookButton>
             </div>
           </div>
         )}
-        <div className="book-header">
+        <div className={classes.header}>
           <Header>book a table</Header>
         </div>
-        <div className="book-table">
+        <div className={classes.formContainer}>
           <form
             id="book_form"
-            className="book-form"
+            className={classes.form}
             onSubmit={formSubmitHandler}
           >
-            <div className="input-container">
+            <div className={classes.inputContainer}>
               <input
-                className={!isNameValid && isNameTouched ? "invalid" : ""}
+                className={
+                  !isNameValid && isNameTouched
+                    ? `${classes.input} ${classes.invalid}`
+                    : classes.input
+                }
                 type="text"
                 placeholder="your name"
                 value={nameValue}
                 onChange={changeNameHandler}
                 onBlur={blurNameHandler}
               />
-              <div className="alert-icon">
+              <div className={classes.alert}>
                 <span>!</span>
               </div>
               {!isNameValid && isNameTouched && (
-                <p className="feedback">Name must not be empty</p>
+                <p className={classes.feedback}>Name must not be empty</p>
               )}
             </div>
-            <div className="input-container">
+            <div className={classes.inputContainer}>
               <input
-                className={!isPhoneValid && isPhoneTouched ? "invalid" : ""}
+                className={
+                  !isPhoneValid && isPhoneTouched
+                    ? `${classes.input} ${classes.invalid}`
+                    : classes.input
+                }
                 type="number"
                 placeholder="phone number"
                 value={phoneValue}
                 onChange={changePhoneHandler}
                 onBlur={blurPhoneHandler}
               />
-              <div className="alert-icon">
+              <div className={classes.alert}>
                 <span>!</span>
               </div>
               {!isPhoneValid && isPhoneTouched && (
-                <p className="feedback">Phone number must be 15 numbers</p>
+                <p className={classes.feedback}>
+                  Phone number must be 15 numbers
+                </p>
               )}
             </div>
-            <div className="input-container">
+            <div className={classes.inputContainer}>
               <input
-                className={!isEmailValid && isEmailTouched ? "invalid" : ""}
+                className={
+                  !isEmailValid && isEmailTouched
+                    ? `${classes.input} ${classes.invalid}`
+                    : classes.input
+                }
                 type="email"
                 placeholder="your email"
                 value={emailValue}
                 onChange={changeEmailHandler}
                 onBlur={blurEmailHandler}
               />
-              <div className="alert-icon">
+              <div className={classes.alert}>
                 <span>!</span>
               </div>
               {!isEmailValid && isEmailTouched && (
-                <p className="feedback">Email is not valid</p>
+                <p className={classes.feedback}>Email is not valid</p>
               )}
             </div>
-            <div className="input-container">
+            <div className={classes.inputContainer}>
               <div
                 className={
                   isOpened
-                    ? "select opened"
+                    ? `${classes.select} ${classes.opened}`
                     : !isSelectorValid && isSelectorTouched
-                    ? "select invalid"
-                    : "select"
+                    ? `${classes.select} ${classes.invalid}`
+                    : classes.select
                 }
                 onClick={onOpenHandler}
               >
                 {selectorValue === "" ? "How many persons?" : selectorValue}
-                <ul>
-                  <li className={selectorValue === "" ? "selected" : ""}>
+                <ul className={classes.ul}>
+                  <li
+                    className={
+                      selectorValue === ""
+                        ? `${classes.li} ${classes.selected}`
+                        : classes.li
+                    }
+                  >
                     How many persons?
                   </li>
                   <li
                     value="2"
-                    className={selectorValue === 2 ? "selected" : ""}
+                    className={
+                      selectorValue === 2
+                        ? `${classes.li} ${classes.selected}`
+                        : classes.li
+                    }
                     onClick={changeSelectorHandler}
                   >
                     2
                   </li>
                   <li
                     value="3"
-                    className={selectorValue === 3 ? "selected" : ""}
+                    className={
+                      selectorValue === 3
+                        ? `${classes.li} ${classes.selected}`
+                        : classes.li
+                    }
                     onClick={changeSelectorHandler}
                   >
                     3
                   </li>
                   <li
                     value="4"
-                    className={selectorValue === 4 ? "selected" : ""}
+                    className={
+                      selectorValue === 4
+                        ? `${classes.li} ${classes.selected}`
+                        : classes.li
+                    }
                     onClick={changeSelectorHandler}
                   >
                     4
                   </li>
                   <li
                     value="5"
-                    className={selectorValue === 5 ? "selected" : ""}
+                    className={
+                      selectorValue === 5
+                        ? `${classes.li} ${classes.selected}`
+                        : classes.li
+                    }
                     onClick={changeSelectorHandler}
                   >
                     5
@@ -243,12 +283,18 @@ const BookTable = () => {
                 </ul>
               </div>
               {!isOpened && !isSelectorValid && isSelectorTouched && (
-                <p className="feedback">Number of persons must be selected</p>
+                <p className={classes.feedback}>
+                  Number of persons must be selected
+                </p>
               )}
             </div>
-            <div className="input-container">
+            <div className={classes.inputContainer}>
               <input
-                className={!isDateValid && isDateTouched ? "invalid" : ""}
+                className={
+                  !isDateValid && isDateTouched
+                    ? `${classes.input} ${classes.invalid}`
+                    : classes.input
+                }
                 type="date"
                 onKeyDown={(e) => {
                   e.preventDefault();
@@ -258,14 +304,12 @@ const BookTable = () => {
                 onBlur={blurDateHandler}
               />
               {!isDateValid && isDateTouched && (
-                <p className="feedback">Date must be selected</p>
+                <p className={classes.feedback}>Date must be selected</p>
               )}
             </div>
-            <BookButton className="book-btn" aria-label="book">
-              book now
-            </BookButton>
+            <BookButton aria-label="book">book now</BookButton>
           </form>
-          <div className="map">
+          <div className={classes.map}>
             <Map />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import "./Menu.css";
+import classes from "./Menu.module.css";
 import Container from "../UI/Container";
 import Header from "../UI/Header";
 import MenuFilters from "./MenuFilters";
@@ -14,14 +14,14 @@ const Menu = () => {
   }, []);
 
   return (
-    <section id="Menu">
+    <section className={classes.menu}>
       <Container>
         <div className="heading">
           <Header>our menu</Header>
         </div>
         <MenuFilters onFilter={onFilterHandler} />
         <MenuItems category={activeCategory} />
-        <Button className="viewBtn" href="#Home">
+        <Button to="/Menu" className={classes.viewBtn}>
           view more
         </Button>
       </Container>

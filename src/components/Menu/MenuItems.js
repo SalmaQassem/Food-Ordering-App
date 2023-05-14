@@ -1,11 +1,11 @@
-import "./MenuItems.css";
+import classes from "./MenuItems.module.css";
 import { useSelector } from "react-redux";
 import MenuItem from "./MenuItem";
 
 const MenuItems = (props) => {
   const menuItems = useSelector((state) => state.menu.items);
   return (
-    <div className="menu-items">
+    <div className={classes.menuItems}>
       {menuItems.map((item) => {
         return (
           <MenuItem key={item.id} item={item} activeCategory={props.category} />

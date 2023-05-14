@@ -1,25 +1,25 @@
-.review-box {
+.box {
   margin: 0 15px;
   cursor: grab;
 }
-.review-box .review {
+.review {
   padding: 25px;
   border-radius: 5px;
   color: #fff;
   text-align: start;
   background-color: var(--NavyColor);
 }
-.review-box .review p {
+.p {
   font-size: 15px;
 }
-.review-box .review .review-details {
+.details {
   margin-bottom: 10px;
 }
-.review-box .review h4 {
+.h4 {
   margin: 15px 0 5px 0;
   font-size: 18px;
 }
-.review-box .client-img {
+.imgContainer {
   width: 115px;
   height: 115px;
   display: flex;
@@ -28,7 +28,7 @@
   position: relative;
   margin-top: 30px;
 }
-.review-box .client-img::before {
+.imgContainer::before {
   content: "";
   position: absolute;
   top: -26px;
@@ -37,7 +37,7 @@
   border: 15px solid;
   border-color: transparent transparent var(--MainColor) transparent;
 }
-.review-box .client-img img {
+.imgContainer img {
   width: 115px;
   height: 115px;
   border: 5px solid var(--MainColor);

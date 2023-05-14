@@ -1,8 +1,8 @@
-#Offers {
+.offers {
   padding: 45px 0 0 0;
   background-color: #fff;
 }
-.offers-items {
+.offersItems {
   width: 100%;
   display: flex;
   align-items: center;
@@ -10,11 +10,11 @@
   gap: 30px;
 }
 @media (min-width: 768px) {
-  .offers-items {
+  .offersItems {
     flex-wrap: nowrap;
   }
 }
-.offers-items .item {
+.item {
   width: 100%;
   display: flex;
   align-items: center;
@@ -25,28 +25,28 @@
   background-color: var(--NavyColor);
 }
 @media (max-width: 430px) {
-  .offers-items .item {
+  .item {
     flex-direction: column;
     justify-content: center;
   }
 }
 @media (max-width: 767.9px) {
-  .offers-items .item:not(:first-of-type) {
+  .item:not(:first-of-type) {
     margin-top: 0;
   }
 }
 @media (min-width: 768px) {
-  .offers-items .item {
+  .item {
     max-width: 50%;
   }
 }
 @media (max-width: 992px) and (min-width: 767px) {
-  .offers-items .item {
+  .item {
     flex-direction: column;
     justify-content: center;
   }
 }
-.offers-items .item .image {
+.imageContainer {
   max-width: 175px;
   max-height: 175px;
   margin-right: 15px;
@@ -56,46 +56,49 @@
   object-fit: cover;
 }
 @media (max-width: 992px) {
-  .offers-items .item .image {
+  .imageContainer {
     margin-right: 0;
     margin-bottom: 15px;
   }
 }
-.offers-items .item .image img {
+.imageContainer img {
   width: 100%;
   height: 100%;
   transition: 0.2s;
 }
-.offers-items .item .image img:hover {
+.imageContainer img:hover {
   transform: scale(1.1);
 }
-.item-description {
+.description {
   text-align: start;
   color: #fff;
 }
 @media (max-width: 992px) {
-  .item-description {
+  .description {
     text-align: center;
   }
 }
-.item-description h2 {
+.h2 {
   font-family: "DancingScript-Regular", cursive;
   font-weight: 500;
   text-transform: capitalize;
   line-height: 1.2;
 }
-.item-description h3 {
+.h3 {
   margin: 10px 0;
   font-family: "DancingScript-Bold", cursive;
   text-transform: capitalize;
 }
-.item-description h3 span {
+.percentage {
   font-size: 2.5rem;
 }
-.item-description .offer-btn {
+.off {
+  font-size: 15px;
+}
+.button {
   padding: 10px 30px;
 }
-.item-description .offer-btn svg {
+.icon {
   margin-left: 5px;
   vertical-align: middle;
 }

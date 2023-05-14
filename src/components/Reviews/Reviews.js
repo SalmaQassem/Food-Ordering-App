@@ -1,4 +1,4 @@
-import "./Reviews.css";
+import classes from "./Reviews.module.css";
 import Container from "../UI/Container";
 import Header from "../UI/Header";
 import Carousel from "react-multi-carousel";
@@ -68,16 +68,16 @@ const Reviews = () => {
       carouselState: { currentSlide },
     } = rest;
     return (
-      <div className="slider-buttons">
+      <div className={classes.sliderButtons}>
         <AddButton
-          className="left-button"
+          className={classes.leftButton}
           aria-label="add"
           onClick={() => previous()}
         >
           <FontAwesomeIcon icon={faChevronLeft} />
         </AddButton>
         <AddButton
-          className="right-button"
+          className={classes.rightButton}
           aria-label="add"
           onClick={() => goToSlide(currentSlide + 1)}
         >
@@ -87,9 +87,9 @@ const Reviews = () => {
     );
   };
   return (
-    <section id="Reviews">
+    <section className={classes.reviews}>
       <Container>
-        <div className="reviews-header">
+        <div className={classes.header}>
           <Header>what says our customers</Header>
         </div>
         <Carousel

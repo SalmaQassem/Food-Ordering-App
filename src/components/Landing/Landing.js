@@ -1,4 +1,4 @@
-import "./Landing.css";
+import classes from "./Landing.module.css";
 import React from "react";
 import Container from "../UI/Container";
 import Carousel from "react-multi-carousel";
@@ -51,14 +51,16 @@ const Landing = () => {
     const { active } = rest;
     return (
       <button
-        className={active ? "dots-item  active" : "dots-item  inactive"}
+        className={
+          active ? `${classes.dot}  ${classes.active}` : `${classes.dot}`
+        }
         aria-label="dot"
         onClick={() => onClick()}
       ></button>
     );
   };
   return (
-    <section className="landing">
+    <section className={classes.landing}>
       <Container>
         <Carousel
           additionalTransfrom={0}
@@ -69,7 +71,7 @@ const Landing = () => {
           className=""
           containerClass="container"
           customDot={<CustomDot />}
-          dotListClass="carousel-dots"
+          dotListClass={classes.dots}
           draggable={false}
           focusOnSelect={false}
           infinite
@@ -91,12 +93,12 @@ const Landing = () => {
         >
           {LandingItems.map((item) => {
             return (
-              <div className="text" key={item.id}>
+              <div className={classes.text} key={item.id}>
                 <h1>{item.title}</h1>
                 <p>{item.description}</p>
                 <Button
-                  href="#Menu"
-                  className="landing-btn"
+                  to="Menu"
+                  className={classes.button}
                   aria-label="Menu Page"
                 >
                   order now

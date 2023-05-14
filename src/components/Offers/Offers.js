@@ -1,4 +1,4 @@
-import "./Offers.css";
+import classes from "./Offers.module.css";
 import React from "react";
 import offers1 from "../../images/o1.webp";
 import offers2 from "../../images/o2.webp";
@@ -9,36 +9,52 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Offers = () => {
   return (
-    <section id="Offers">
+    <section className={classes.offers}>
       <Container>
-        <div className="offers-items">
-          <div className="item">
-            <div className="image">
+        <div className={classes.offersItems}>
+          <div className={classes.item}>
+            <div className={classes.imageContainer}>
               <img src={offers1} alt="" />
             </div>
-            <div className="item-description">
-              <h2>tasty thursdays</h2>
-              <h3>
-                <span>20%</span> off
+            <div className={classes.description}>
+              <h2 className={classes.h2}>tasty thursdays</h2>
+              <h3 className={classes.h3}>
+                <span className={classes.percentage}>
+                  20%<span className={classes.off}> off</span>
+                </span>
               </h3>
-              <Button href="#Menu" aria-label="Menu Page" className="offer-btn">
+              <Button
+                to="/Menu"
+                aria-label="Menu Page"
+                className={classes.button}
+              >
                 order now
-                <FontAwesomeIcon icon={faCartShopping} />
+                <span className={classes.icon}>
+                  <FontAwesomeIcon icon={faCartShopping} />
+                </span>
               </Button>
             </div>
           </div>
-          <div className="item">
-            <div className="image">
+          <div className={classes.item}>
+            <div className={classes.imageContainer}>
               <img src={offers2} alt="" />
             </div>
-            <div className="item-description">
-              <h2>pizza days</h2>
-              <h3>
-                <span>15%</span> off
+            <div className={classes.description}>
+              <h2 className={classes.h2}>pizza days</h2>
+              <h3 className={classes.h3}>
+                <span className={classes.percentage}>
+                  15%<span className={classes.off}> off</span>
+                </span>
               </h3>
-              <Button href="#Menu" aria-label="Menu Page" className="offer-btn">
+              <Button
+                to="/Menu"
+                aria-label="Menu Page"
+                className={classes.button}
+              >
                 order now
-                <FontAwesomeIcon icon={faCartShopping} />
+                <span className={classes.icon}>
+                  <FontAwesomeIcon icon={faCartShopping} />
+                </span>
               </Button>
             </div>
           </div>

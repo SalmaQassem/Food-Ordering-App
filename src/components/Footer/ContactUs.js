@@ -1,33 +1,34 @@
-import "./ContactUs.css";
+import classes from "./ContactUs.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
   faPhone,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import FooterHeader from "../UI/FooterHeader";
 
 const ContactUs = () => {
   return (
-    <div className="contact">
-      <h4 className="Item-header">contact us</h4>
-      <div className="contact-box">
+    <div>
+      <FooterHeader>contact us</FooterHeader>
+      <div className={classes.box}>
         <a href="#Home" aria-label="Location">
-          <span className="contact-icon">
+          <span className={classes.icon}>
             <FontAwesomeIcon icon={faLocationDot} />
           </span>
-          <span className="contact-text">Location</span>
+          <span>Location</span>
         </a>
         <a href="#Home" aria-label="Phone">
-          <span className="contact-icon">
+          <span className={classes.icon}>
             <FontAwesomeIcon icon={faPhone} />
           </span>
-          <span className="contact-text"> Call +01 1234567890</span>
+          <span> Call +01 1234567890</span>
         </a>
         <a href="#Home" aria-label="Email">
-          <span className="contact-icon">
+          <span className={classes.icon}>
             <FontAwesomeIcon icon={faEnvelope} />
           </span>
-          <span className="contact-text">demo@gmail.com</span>
+          <span>demo@gmail.com</span>
         </a>
       </div>
     </div>

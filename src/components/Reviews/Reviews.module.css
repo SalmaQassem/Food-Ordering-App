@@ -1,11 +1,12 @@
-#Reviews {
+.reviews {
   padding: var(--SectionPadding);
   padding-top: 0;
 }
-#Reviews .reviews-header {
+.header {
   margin-bottom: 40px;
+  text-align: center;
 }
-#Reviews .slider-buttons {
+.sliderButtons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,8 +14,8 @@
   margin-top: 45px;
   position: relative;
 }
-#Reviews .slider-buttons .left-button,
-#Reviews .slider-buttons .right-button {
+.leftButton,
+.rightButton {
   width: 45px !important;
   height: 45px !important;
 }

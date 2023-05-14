@@ -1,4 +1,4 @@
-#Menu .menu-filters {
+.filters {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,13 +7,13 @@
   list-style: none;
   overflow: hidden;
 }
-#Menu .menu-filters li {
+.filter {
   padding: 7px 25px;
   border-radius: 25px;
   text-transform: capitalize;
   cursor: pointer;
 }
-#Menu .menu-filters li.active {
+.active {
   color: #fff;
   background-color: var(--NavyColor);
 }

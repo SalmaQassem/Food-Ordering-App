@@ -1,4 +1,4 @@
-import "./MenuItem.css";
+import classes from "./MenuItem.module.css";
 import AddButton from "../UI/AddButton";
 import { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -34,21 +34,21 @@ const MenuItem = (props) => {
       className={
         props.activeCategory === props.item.category ||
         props.activeCategory === "all"
-          ? "menu-item active"
-          : "menu-item"
+          ? `${classes.item} ${classes.active}`
+          : classes.item
       }
       onSubmit={onFormSubmitHandler}
       id={props.item.id}
       key={props.item.id}
     >
-      <div className="menu-image">
+      <div className={classes.imageContainer}>
         <img src={props.item.imageUrl} alt="" />
       </div>
-      <div className="item-desc">
-        <h3>{props.item.name}</h3>
-        <p>{props.item.description}</p>
-        <div className="price">
-          <h3>${props.item.price}</h3>
+      <div className={classes.description}>
+        <h3 className={classes.h3}>{props.item.name}</h3>
+        <p className={classes.p}>{props.item.description}</p>
+        <div className={classes.priceContainer}>
+          <h3 className={classes.price}>${props.item.price}</h3>
           <AddButton type="submit" aria-label="add">
             <FontAwesomeIcon icon={faCartShopping} />
           </AddButton>

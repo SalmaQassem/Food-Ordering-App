@@ -1,7 +1,8 @@
-#Menu {
+.menu {
   padding: var(--SectionPadding);
+  text-align: center;
 }
-#Menu .viewBtn {
+.viewBtn {
   padding: 10px 55px;
   margin-top: 45px;
 }

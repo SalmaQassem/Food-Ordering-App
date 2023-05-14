@@ -1,4 +1,4 @@
-import "./About.css";
+import classes from "./About.module.css";
 import Container from "../UI/Container";
 import Header from "../UI/Header";
 import Button from "../UI/Button";
@@ -6,15 +6,15 @@ import AboutImg from "../../images/about-img.webp";
 
 const About = () => {
   return (
-    <section id="About">
+    <section className={classes.about}>
       <Container>
-        <div className="about-box">
-          <div className="about-img">
+        <div className={classes.box}>
+          <div className={classes.imagerContainer}>
             <img src={AboutImg} alt=""></img>
           </div>
-          <div className="about-text">
+          <div className={classes.text}>
             <Header>we are feane</Header>
-            <p>
+            <p className={classes.p}>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
               injected humour, or randomised words which don't look even
@@ -22,7 +22,7 @@ const About = () => {
               Ipsum, you need to be sure there isn't anything embarrassing
               hidden in the middle of text. All
             </p>
-            <Button href="#Home" aria-label="About Page">
+            <Button to="/About" aria-label="About Page" className={classes.a}>
               read more
             </Button>
           </div>

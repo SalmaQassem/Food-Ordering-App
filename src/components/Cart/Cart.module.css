@@ -1,4 +1,4 @@
-#Cart {
+.cart {
   width: 320px;
   height: 100vh;
   position: fixed;
@@ -11,94 +11,94 @@
   justify-content: space-between;
   transition: 0.3s ease-in-out;
 }
-#Cart.opened {
+.cart.opened {
   right: 0;
 }
-.cart-overlay {
+.overlay {
   display: none;
 }
-.cart-overlay.opened {
+.overlay.opened {
   display: block;
 }
-#Cart .cart-content {
+.content {
   width: 100%;
   padding: 20px;
   overflow-y: scroll;
   overflow-x: scroll;
 }
-#Cart .cart-content::-webkit-scrollbar {
+.content::-webkit-scrollbar {
   width: 13px;
 }
-#Cart .cart-content::-webkit-scrollbar-track {
+.content::-webkit-scrollbar-track {
   background-color: transparent;
   margin: 10px;
 }
-#Cart .cart-content::-webkit-scrollbar-thumb {
+.content::-webkit-scrollbar-thumb {
   border: 4px solid #fff;
   background-clip: padding-box;
   border-radius: 10px;
   background: #ffbe33;
 }
-#Cart .cart-content .cart-header,
-#Cart .cart-content .cart-body {
+.header,
+.body {
   width: 100%;
 }
-#Cart .cart-content .cart-header {
+.header {
   display: flex;
   margin-bottom: 20px;
   align-items: center;
   justify-content: space-between;
 }
-#Cart .cart-content .cart-header > h1 {
+.header > h1 {
   text-transform: capitalize;
   font-size: 16px;
 }
 @media (max-width: 576px) {
-  #Cart .cart-content .cart-header > h1 {
+  .header > h1 {
     font-size: 15px;
   }
-  #Cart .cart-content .cart-header > button {
+  .header > button {
     font-size: 14px;
   }
 }
-#Cart .cart-content .cart-body .items-list {
+.items {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-#Cart .checkout {
+.checkout {
   padding: 20px;
   text-align: end;
   border-top: 1px solid #ffbe33;
 }
-#Cart .checkout .checkout-content {
+.checkoutContent {
   display: flex;
   justify-content: space-between;
   align-items: start;
 }
-#Cart .checkout .checkout-content .total h1,
-#Cart .checkout .checkout-content .total p {
+.checkoutContent > h1 {
+  font-size: 18px;
+}
+.total h1,
+.total p {
   text-transform: capitalize;
   text-align: start;
 }
-#Cart .checkout .checkout-content .total h1 {
+.total h1 {
   font-size: 14px;
 }
-#Cart .checkout .checkout-content .total p {
+.total p {
   font-size: 12px;
   color: #ffbe33;
 }
-#Cart .checkout .checkout-content > h1 {
-  font-size: 18px;
-}
-#Cart .checkout .checkout-buttons {
+.checkoutButtons {
   display: flex;
   align-items: center;
   justify-content: end;
   gap: 10px;
   margin-top: 10px;
 }
-#Cart .checkout .checkout-buttons > a {
+.checkoutButtons > a {
   margin: 0;
   padding: 5px 20px;
   font-size: 14px;

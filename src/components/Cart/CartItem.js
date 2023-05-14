@@ -1,4 +1,4 @@
-import "./CartItem.css";
+import classes from "./CartItem.module.css";
 import { useCallback } from "react";
 import { cartActions } from "../../store/cartSlice";
 import { useDispatch } from "react-redux";
@@ -19,17 +19,17 @@ const CartItem = (props) => {
   }, [dispatch, props]);
 
   return (
-    <div className="cart-item">
-      <div className="item-image">
+    <div className={classes.cartItem}>
+      <div className={classes.image}>
         <img src={props.data.imageUrl} alt="" />
       </div>
-      <p className="item-name">{props.data.name}</p>
-      <div className="amount-buttons">
+      <p className={classes.name}>{props.data.name}</p>
+      <div className={classes.amountButtons}>
         <button onClick={onClickDecrease}>-</button>
-        <p className="amount">{props.data.quantity}</p>
+        <p className={classes.amount}>{props.data.quantity}</p>
         <button onClick={increaseHandler}>+</button>
       </div>
-      <div className="item-price">
+      <div className={classes.price}>
         <p>${props.data.totalPrice}</p>
         <RemoveButton onClick={onClickRemoveHandler}>remove</RemoveButton>
       </div>

@@ -1,4 +1,6 @@
-import "./Social.css";
+import classes from "./Social.module.css";
+import FooterHeader from "../UI/FooterHeader";
+import FooterParagraph from "../UI/FooterParagraph";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -7,33 +9,36 @@ import {
   faInstagram,
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const Social = () => {
   return (
-    <div className="social">
-      <a href="#Home" aria-label="Home Page" className="Item-header">
-        feane
-      </a>
-      <p>
+    <div className={classes.social}>
+      <FooterHeader>
+        <Link to="/" className={classes.header} aria-label="Home Page">
+          feane
+        </Link>
+      </FooterHeader>
+      <FooterParagraph>
         Necessary, making this the first true generator on the Internet. It uses
         a dictionary of over 200 Latin words, combined with
-      </p>
-      <div className="social-links">
-        <a href="#Home" aria-label="Facebook Link">
+      </FooterParagraph>
+      <div className={classes.links}>
+        <Link to="/" aria-label="Facebook Link">
           <FontAwesomeIcon icon={faFacebookF} />
-        </a>
-        <a href="#Home" aria-label="Twitter Link">
+        </Link>
+        <Link to="/" aria-label="Twitter Link">
           <FontAwesomeIcon icon={faTwitter} />
-        </a>
-        <a href="#Home" aria-label="LinkedIn Link">
+        </Link>
+        <Link to="/" aria-label="LinkedIn Link">
           <FontAwesomeIcon icon={faLinkedinIn} />
-        </a>
-        <a href="#Home" aria-label="Instagram Link">
+        </Link>
+        <Link to="/" aria-label="Instagram Link">
           <FontAwesomeIcon icon={faInstagram} />
-        </a>
-        <a href="#Home" aria-label="Pinterest Link">
+        </Link>
+        <Link to="/" aria-label="Pinterest Link">
           <FontAwesomeIcon icon={faPinterest} />
-        </a>
+        </Link>
       </div>
     </div>
   );

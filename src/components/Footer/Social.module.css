@@ -1,21 +1,24 @@
-.social > a {
+.social {
+  text-align: center;
+}
+.header {
   display: block;
   color: #fff;
   font-size: 38px !important;
   line-height: 1;
 }
-.social .social-links,
-.social .social-links a {
+.links,
+.links a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.social .social-links {
+.links {
   gap: 5px;
   margin: 20px 0 10px 0;
   cursor: pointer;
 }
-.social .social-links a {
+.links a {
   width: 30px;
   height: 30px;
   font-size: 18px;
@@ -23,6 +26,6 @@
   background-color: #fff;
   color: var(--NavyColor);
 }
-.social .social-links a:hover {
+.links a:hover {
   color: var(--MainColor);
 }
