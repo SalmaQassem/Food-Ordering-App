@@ -21,7 +21,7 @@ const Menu = () => {
         </div>
         <MenuFilters onFilter={onFilterHandler} />
         <MenuItems category={activeCategory} />
-        <Button to="/Menu" className={classes.viewBtn}>
+        <Button to="/Food-Ordering-App/Menu" className={classes.viewBtn}>
           view more
         </Button>
       </Container>

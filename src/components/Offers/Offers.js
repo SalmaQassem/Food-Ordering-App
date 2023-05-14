@@ -24,7 +24,7 @@ const Offers = () => {
                 </span>
               </h3>
               <Button
-                to="/Menu"
+                to="Menu"
                 aria-label="Menu Page"
                 className={classes.button}
               >
@@ -47,7 +47,7 @@ const Offers = () => {
                 </span>
               </h3>
               <Button
-                to="/Menu"
+                to="Menu"
                 aria-label="Menu Page"
                 className={classes.button}
               >

@@ -38,7 +38,11 @@ const NavBar = () => {
     <div className={classes.navbar}>
       <Container>
         <nav className={classes.items}>
-          <Link to="/" aria-label="Home Page" className={classes.logo}>
+          <Link
+            to="/Food-Ordering-App"
+            aria-label="Home Page"
+            className={classes.logo}
+          >
             <span>feane</span>
           </Link>
           <div
@@ -63,11 +67,12 @@ const NavBar = () => {
             <ul className={classes.links}>
               <li>
                 <NavLink
-                  to="Home"
+                  to="/Food-Ordering-App"
                   aria-label="Home Page"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
                   }
+                  end
                   onClick={linkClickHandler}
                 >
                   home
@@ -113,7 +118,7 @@ const NavBar = () => {
             <div className={classes.user}>
               <ul className={classes.sideList}>
                 <li>
-                  <Link to="/" aria-label="Profile Page">
+                  <Link to="/Food-Ordering-App" aria-label="Profile Page">
                     <FontAwesomeIcon icon={faUser} />
                   </Link>
                 </li>
@@ -123,7 +128,7 @@ const NavBar = () => {
                   </span>
                 </li>
                 <li>
-                  <Link to="/" aria-label="Search Page">
+                  <Link to="/Food-Ordering-App" aria-label="Search Page">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                   </Link>
                 </li>

@@ -17,15 +17,12 @@ import Root from "./components/Roots/RootLayout";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Food-Ordering-App",
     element: <HomeRootLayout />,
-    children: [
-      { index: true, element: <HomePage /> },
-      { path: "Home", element: <HomePage /> },
-    ],
+    children: [{ index: true, element: <HomePage /> }],
   },
   {
-    path: "/",
+    path: "/Food-Ordering-App",
     element: <Root />,
     children: [
       { path: "Menu", element: <Menu /> },
