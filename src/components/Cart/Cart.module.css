@@ -1,8 +1,8 @@
 .cart {
-  width: 320px;
+  width: 350px;
   height: 100vh;
   position: fixed;
-  right: -320px;
+  right: -350px;
   top: 0;
   z-index: 12;
   background-color: #fff;

@@ -25,9 +25,21 @@ const CartItem = (props) => {
       </div>
       <p className={classes.name}>{props.data.name}</p>
       <div className={classes.amountButtons}>
-        <button onClick={onClickDecrease}>-</button>
+        <button
+          type="button"
+          className={classes.button}
+          onClick={onClickDecrease}
+        >
+          -
+        </button>
         <p className={classes.amount}>{props.data.quantity}</p>
-        <button onClick={increaseHandler}>+</button>
+        <button
+          type="button"
+          className={classes.button}
+          onClick={increaseHandler}
+        >
+          +
+        </button>
       </div>
       <div className={classes.price}>
         <p>${props.data.totalPrice}</p>

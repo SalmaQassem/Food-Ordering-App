@@ -1,0 +1,70 @@
+.checkout {
+  margin-bottom: 30px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+}
+@media (min-width: 992px) {
+  .body {
+    flex-direction: row;
+  }
+}
+.summary {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-basis: calc(35% - 25px);
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px 1px #ccc;
+}
+.header h4,
+.header p,
+.item h4,
+.item p {
+  color: #7b7b7b;
+  text-transform: capitalize;
+}
+.header h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.header p {
+  font-size: 13px;
+  text-transform: none;
+}
+.header p,
+.item:not(:last-of-type) h4,
+.item:not(:last-of-type) p {
+  font-weight: 400;
+}
+.prices {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+.item:last-of-type h4,
+.item:last-of-type p {
+  color: var(--MainColor);
+  font-weight: bold;
+  font-size: 18px;
+}
+.submit {
+  margin-left: auto;
+}

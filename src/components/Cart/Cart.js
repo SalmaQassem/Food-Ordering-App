@@ -21,6 +21,9 @@ const Cart = () => {
     e.preventDefault();
     context.setIsCartOpened(false);
   };
+  const onClickCheckoutHandler = (e) => {
+    context.setIsCartOpened(false);
+  };
 
   return (
     <>
@@ -64,7 +67,9 @@ const Cart = () => {
             <Button to="/" onClick={onClickCancelHandler}>
               cancel
             </Button>
-            <Button to="/">checkout</Button>
+            <Button to="Checkout" onClick={onClickCheckoutHandler}>
+              checkout
+            </Button>
           </div>
         </div>
       </section>

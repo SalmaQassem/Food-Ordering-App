@@ -8,7 +8,14 @@ import useInput from "../../hooks/useInput";
 import { useState, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-
+import SelectorInput from "../SelectorInput/SelectorInput";
+const DUMMYSELECTOR = [
+  { id: "v1", value: "" },
+  { id: "v2", value: "2" },
+  { id: "v3", value: "3" },
+  { id: "v4", value: "4" },
+  { id: "v5", value: "5" },
+];
 const BookTable = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isConfirm, setIsConfirm] = useState(false);
@@ -215,79 +222,22 @@ const BookTable = () => {
               )}
             </div>
             <div className={classes.inputContainer}>
-              <div
-                className={
-                  isOpened
-                    ? `${classes.select} ${classes.opened}`
-                    : !isSelectorValid && isSelectorTouched
-                    ? `${classes.select} ${classes.invalid}`
-                    : classes.select
-                }
-                onClick={onOpenHandler}
-              >
-                {selectorValue === "" ? "How many persons?" : selectorValue}
-                <ul className={classes.ul}>
-                  <li
-                    className={
-                      selectorValue === ""
-                        ? `${classes.li} ${classes.selected}`
-                        : classes.li
-                    }
-                  >
-                    How many persons?
-                  </li>
-                  <li
-                    value="2"
-                    className={
-                      selectorValue === 2
-                        ? `${classes.li} ${classes.selected}`
-                        : classes.li
-                    }
-                    onClick={changeSelectorHandler}
-                  >
-                    2
-                  </li>
-                  <li
-                    value="3"
-                    className={
-                      selectorValue === 3
-                        ? `${classes.li} ${classes.selected}`
-                        : classes.li
-                    }
-                    onClick={changeSelectorHandler}
-                  >
-                    3
-                  </li>
-                  <li
-                    value="4"
-                    className={
-                      selectorValue === 4
-                        ? `${classes.li} ${classes.selected}`
-                        : classes.li
-                    }
-                    onClick={changeSelectorHandler}
-                  >
-                    4
-                  </li>
-                  <li
-                    value="5"
-                    className={
-                      selectorValue === 5
-                        ? `${classes.li} ${classes.selected}`
-                        : classes.li
-                    }
-                    onClick={changeSelectorHandler}
-                  >
-                    5
-                  </li>
-                </ul>
-              </div>
-              {!isOpened && !isSelectorValid && isSelectorTouched && (
-                <p className={classes.feedback}>
-                  Number of persons must be selected
-                </p>
-              )}
+              <SelectorInput
+                data={DUMMYSELECTOR}
+                default="How many persons?"
+                changeSelector={changeSelectorHandler}
+                isSelectorOpened={isOpened}
+                isValid={isSelectorValid}
+                isTouched={isSelectorTouched}
+                onOpen={onOpenHandler}
+                selector={selectorValue}
+              />
             </div>
+            {!isOpened && !isSelectorValid && isSelectorTouched && (
+              <p className={classes.feedback}>
+                Number of persons must be selected
+              </p>
+            )}
             <div className={classes.inputContainer}>
               <input
                 className={

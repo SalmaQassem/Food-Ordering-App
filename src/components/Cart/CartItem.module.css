@@ -10,26 +10,25 @@
     font-size: 13px;
   }
 }
+.image {
+  width: 20%;
+}
 .image img {
   width: 50px;
   height: 50px;
 }
-@media (max-width: 576px) {
-  .image img {
-    width: 40px;
-    height: 40px;
-  }
-}
 .name {
+  width: 30%;
   text-transform: capitalize;
   flex: 1;
 }
 .amountButtons {
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.amountButtons button {
+.button {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -39,13 +38,14 @@
   font-size: 13px;
   cursor: pointer;
 }
-.amountButtons button:hover {
+.button:hover {
   background-color: #e69c00;
 }
 .amount {
-  margin: 0 5px;
+  margin: 0 8px;
 }
 .price {
+  width: 20%;
   text-align: end;
 }
 .price button {

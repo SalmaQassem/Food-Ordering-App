@@ -13,8 +13,8 @@ const useInput = (validateValue) => {
       return true;
     }
   };
-  const changeInputHandler = (e) => {
-    setInputValue(e.target.value);
+  const changeInputHandler = (value) => {
+    setInputValue(value);
   };
   const blurInputHandler = () => {
     if (!isInputTouched) {

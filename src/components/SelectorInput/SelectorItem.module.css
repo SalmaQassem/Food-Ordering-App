@@ -1,0 +1,13 @@
+.li {
+  padding: 0 29px 0 18px;
+  color: #000;
+  line-height: 40px;
+  font-family: "OpenSans-Regular", sans-serif;
+}
+.li.selected,
+.li:hover {
+  background-color: #f6f6f6;
+}
+.li.selected {
+  font-family: "OpenSans-Bold", sans-serif;
+}

@@ -1,5 +1,6 @@
 import "./App.css";
 import HomePage from "./components/HomePage/HomePage";
+import Checkout from "./components/Checkout/Checkout";
 import Menu from "./components/Menu/Menu";
 import About from "./components/About/About";
 import BookTable from "./components/BookTable/BookTable";
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
     path: "/Food-Ordering-App/",
     element: <Root />,
     children: [
+      { path: "Checkout", element: <Checkout /> },
       { path: "Menu", element: <Menu /> },
       { path: "About", element: <About /> },
       { path: "BookTable", element: <BookTable /> },

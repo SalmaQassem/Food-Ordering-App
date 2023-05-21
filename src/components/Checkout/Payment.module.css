@@ -1,0 +1,51 @@
+.info,
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+}
+@media (min-width: 576px) {
+  .inputs {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+.button {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "OpenSans-Regular";
+  font-size: 15px;
+  color: #7d7d7d;
+  text-transform: capitalize;
+  background-color: #fff;
+  border-radius: 16px;
+  border: 2px solid var(--MainColor);
+  cursor: pointer;
+}
+@media (min-width: 576px) {
+  .button {
+    width: calc(100% / 3);
+  }
+}
+.svg {
+  width: 50px;
+  height: 50px;
+}
+.label {
+  display: block;
+  text-transform: capitalize;
+}
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 6px 30px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  outline: none;
+}
