@@ -8,7 +8,7 @@ const ReviewItem = (props) => {
         <p className={classes.p}>{props.item.title}</p>
       </div>
       <div className={classes.imgContainer}>
-        <img src={props.item.imageURL} alt="" />
+        <img src={props.item.imageURL} alt="" loading="lazy" />
       </div>
     </div>
   );

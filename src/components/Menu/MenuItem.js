@@ -42,7 +42,7 @@ const MenuItem = (props) => {
       key={props.item.id}
     >
       <div className={classes.imageContainer}>
-        <img src={props.item.imageUrl} alt="" />
+        <img src={props.item.imageUrl} alt="" loading="lazy" />
       </div>
       <div className={classes.description}>
         <h3 className={classes.h3}>{props.item.name}</h3>
