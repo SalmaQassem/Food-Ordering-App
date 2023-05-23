@@ -13,19 +13,28 @@
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 12;
   text-align: center;
   background-color: #fff;
   border-radius: 5px;
+  -webkit-box-shadow: 0 1px 10px -1px #333;
   box-shadow: 0 1px 10px -1px #333;
 }
 .icon {
   width: 55px;
   height: 55px;
   margin: 0 auto 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: var(--MainColor);
   font-size: 36px;
@@ -48,18 +57,28 @@
   text-align: left;
 }
 .formContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 45px;
 }
 @media (min-width: 768px) {
   .formContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     gap: 30px;
   }
 }
 .form {
   text-align: start;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 .inputContainer {
@@ -77,6 +96,22 @@
   outline: none;
   border-radius: 5px;
 }
+.input::-webkit-input-placeholder {
+  color: #222222;
+  text-transform: capitalize;
+}
+.input::-moz-placeholder {
+  color: #222222;
+  text-transform: capitalize;
+}
+.input:-ms-input-placeholder {
+  color: #222222;
+  text-transform: capitalize;
+}
+.input::-ms-input-placeholder {
+  color: #222222;
+  text-transform: capitalize;
+}
 .input::placeholder {
   color: #222222;
   text-transform: capitalize;
@@ -84,6 +119,18 @@
 .invalid {
   color: red;
   border-color: red;
+}
+.invalid::-webkit-input-placeholder {
+  color: red;
+}
+.invalid::-moz-placeholder {
+  color: red;
+}
+.invalid:-ms-input-placeholder {
+  color: red;
+}
+.invalid::-ms-input-placeholder {
+  color: red;
 }
 .invalid::placeholder {
   color: red;
@@ -94,6 +141,8 @@
   position: absolute;
   top: 25px;
   right: 12px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   display: none;
   border-radius: 50%;
@@ -103,13 +152,21 @@
   border: 2px solid red;
 }
 .invalid + .alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .feedback {
   color: red;
   font-size: 15px;
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
   transform: translateY(-20px);
 }
 input[type="number"]::-webkit-outer-spin-button,
@@ -122,6 +179,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .input[type="date"].invalid::-webkit-calendar-picker-indicator,
 .input[type="date"].invalid::-webkit-datetime-edit {
+  -webkit-filter: invert(100%) brightness(50%) sepia(100%) saturate(10000%);
   filter: invert(100%) brightness(50%) sepia(100%) saturate(10000%);
 }
 .input[type="date"].invalid::-webkit-datetime-edit-year-field,
@@ -130,6 +188,8 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: initial;
 }
 .map {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   position: relative;
   z-index: 1;

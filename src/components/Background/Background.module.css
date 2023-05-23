@@ -1,7 +1,12 @@
 .background,
 .sub {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .background {
@@ -22,8 +27,10 @@
 .subImage img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .subImage img {
+  -o-object-position: right top;
   object-position: right top;
 }

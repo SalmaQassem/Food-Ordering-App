@@ -10,6 +10,8 @@ const Button = styled(Link)`
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 
   &:hover {

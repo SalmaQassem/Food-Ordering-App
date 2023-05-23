@@ -5,7 +5,10 @@
   text-align: center;
 }
 .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 -15px;
 }
@@ -17,6 +20,8 @@
 @media (min-width: 768px) {
   .item {
     max-width: calc(100% / 3);
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(100% / 3);
     flex: 0 0 calc(100% / 3);
   }
 }
