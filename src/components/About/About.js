@@ -10,7 +10,7 @@ const About = () => {
       <Container>
         <div className={classes.box}>
           <div className={classes.imagerContainer}>
-            <img src={AboutImg} alt="" loading="lazy"></img>
+            <img src={AboutImg} alt="about_img" loading="lazy"></img>
           </div>
           <div className={classes.text}>
             <Header>we are feane</Header>

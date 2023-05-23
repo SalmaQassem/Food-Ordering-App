@@ -14,7 +14,7 @@ const Offers = () => {
         <div className={classes.offersItems}>
           <div className={classes.item}>
             <div className={classes.imageContainer}>
-              <img src={offers1} alt="" loading="lazy" />
+              <img src={offers1} alt="offer" loading="lazy" />
             </div>
             <div className={classes.description}>
               <h2 className={classes.h2}>tasty thursdays</h2>
@@ -37,7 +37,7 @@ const Offers = () => {
           </div>
           <div className={classes.item}>
             <div className={classes.imageContainer}>
-              <img src={offers2} alt="" loading="lazy" />
+              <img src={offers2} alt="offer" loading="lazy" />
             </div>
             <div className={classes.description}>
               <h2 className={classes.h2}>pizza days</h2>

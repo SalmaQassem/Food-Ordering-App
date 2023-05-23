@@ -21,7 +21,7 @@ const CartItem = (props) => {
   return (
     <div className={classes.cartItem}>
       <div className={classes.image}>
-        <img src={props.data.imageUrl} alt="" loading="lazy" />
+        <img src={props.data.imageUrl} alt="cart_item" loading="lazy" />
       </div>
       <p className={classes.name}>{props.data.name}</p>
       <div className={classes.amountButtons}>
