@@ -1,8 +1,8 @@
 import "./App.css";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
-import Error from "./components/Error/Error";
 import HomePage from "./components/HomePage/HomePage";
+import Error from "./components/Error/Error";
 import Root from "./components/Roots/RootLayout";
 import Checkout from "./components/Checkout/Checkout";
 import Menu from "./components/Menu/Menu";
@@ -11,6 +11,7 @@ import BookTable from "./components/BookTable/BookTable";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchLandingData } from "./store/landingActions";
+import { fetchOffersData } from "./store/offersActions";
 import { fetchMenuData } from "./store/menuActions";
 import { fetchReviewsData } from "./store/reviewsActions";
 import "./fonts/DancingScript-Regular.ttf";
@@ -41,12 +42,17 @@ const routes = createBrowserRouter([
 
 function App() {
   const landingDispatch = useDispatch();
+  const offersDispatch = useDispatch();
   const menuDispatch = useDispatch();
   const reviewsDispatch = useDispatch();
 
   useEffect(() => {
     landingDispatch(fetchLandingData());
   }, [landingDispatch]);
+
+  useEffect(() => {
+    offersDispatch(fetchOffersData());
+  }, [offersDispatch]);
 
   useEffect(() => {
     menuDispatch(fetchMenuData());
