@@ -4,11 +4,11 @@ const ReviewItem = (props) => {
     <div className={classes.box}>
       <div className={classes.review}>
         <p className={`${classes.p} ${classes.details}`}>{props.item.text}</p>
-        <h4 className={classes.h4}>{props.item.customerName}</h4>
+        <h4 className={classes.h4}>{props.item.name}</h4>
         <p className={classes.p}>{props.item.title}</p>
       </div>
       <div className={classes.imgContainer}>
-        <img src={props.item.imageURL} alt="client_img" loading="lazy" />
+        <img src={props.item.imageUrl} alt="client_img" loading="lazy" />
       </div>
     </div>
   );

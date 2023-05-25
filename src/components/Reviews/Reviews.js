@@ -5,13 +5,12 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ReviewItem from "./ReviewItem";
 import AddButton from "../UI/AddButton";
-import client1 from "../../images/client1.webp";
-import client2 from "../../images/client2.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { useSelector } from "react-redux";
 
 const responsive = {
   superLargeDesktop: {
@@ -31,38 +30,9 @@ const responsive = {
     items: 1,
   },
 };
-const reviews = [
-  {
-    id: "c1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-    customerName: "Moana Michell",
-    title: "magna aliqua",
-    imageURL: client1,
-  },
-  {
-    id: "c2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-    customerName: "Mike Hamell",
-    title: "magna aliqua",
-    imageURL: client2,
-  },
-  {
-    id: "c3",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-    customerName: "Moana Michell",
-    title: "magna aliqua",
-    imageURL: client1,
-  },
-  {
-    id: "c4",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-    customerName: "Mike Hamell",
-    title: "magna aliqua",
-    imageURL: client2,
-  },
-];
 
 const Reviews = () => {
+  const reviews = useSelector((state) => state.reviews.items);
   const CustomButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
     const {
       carouselState: { currentSlide },

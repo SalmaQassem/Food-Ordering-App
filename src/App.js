@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchLandingData } from "./store/landingActions";
 import { fetchMenuData } from "./store/menuActions";
+import { fetchReviewsData } from "./store/reviewsActions";
 import "./fonts/DancingScript-Regular.ttf";
 import "./fonts/DancingScript-Medium.ttf";
 import "./fonts/DancingScript-SemiBold.ttf";
@@ -39,14 +40,21 @@ const routes = createBrowserRouter([
 ]);
 
 function App() {
-  const dispatch = useDispatch();
+  const landingDispatch = useDispatch();
+  const menuDispatch = useDispatch();
+  const reviewsDispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(fetchLandingData());
-  }, [dispatch]);
-  
+    landingDispatch(fetchLandingData());
+  }, [landingDispatch]);
+
   useEffect(() => {
-    dispatch(fetchMenuData());
-  }, [dispatch]);
+    menuDispatch(fetchMenuData());
+  }, [menuDispatch]);
+
+  useEffect(() => {
+    reviewsDispatch(fetchReviewsData());
+  }, [reviewsDispatch]);
 
   return <RouterProvider router={routes} />;
 }
