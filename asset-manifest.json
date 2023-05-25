@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Food-Ordering-App/static/css/main.100bf866.css",
-    "main.js": "/Food-Ordering-App/static/js/main.76b5ce6c.js",
+    "main.js": "/Food-Ordering-App/static/js/main.d12325f6.js",
     "static/js/787.9643ecdb.chunk.js": "/Food-Ordering-App/static/js/787.9643ecdb.chunk.js",
     "static/media/about-img.webp": "/Food-Ordering-App/static/media/about-img.8bad30ea401823bbbd50.webp",
     "static/media/OpenSans-Medium.ttf": "/Food-Ordering-App/static/media/OpenSans-Medium.a4894b36b47378c77c5f.ttf",
@@ -13,8 +13,6 @@
     "static/media/DancingScript-SemiBold.ttf": "/Food-Ordering-App/static/media/DancingScript-SemiBold.c4f068e98fbc53ef9ec4.ttf",
     "static/media/DancingScript-Bold.ttf": "/Food-Ordering-App/static/media/DancingScript-Bold.72fc35f38c2864ca2cd5.ttf",
     "static/media/DancingScript-Regular.ttf": "/Food-Ordering-App/static/media/DancingScript-Regular.5bfc0dcc0c0ff5a2832e.ttf",
-    "static/media/o2.webp": "/Food-Ordering-App/static/media/o2.006c89a97b01f40805ba.webp",
-    "static/media/o1.webp": "/Food-Ordering-App/static/media/o1.3dad522578b867aaff03.webp",
     "static/media/revicons.eot": "/Food-Ordering-App/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/Food-Ordering-App/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/Food-Ordering-App/static/media/revicons.e8746a624ed098489406.woff",
@@ -22,11 +20,11 @@
     "index.html": "/Food-Ordering-App/index.html",
     "static/media/mastercard.svg": "/Food-Ordering-App/static/media/mastercard.25350e288da9a9ef7328a4fb6d012ed7.svg",
     "main.100bf866.css.map": "/Food-Ordering-App/static/css/main.100bf866.css.map",
-    "main.76b5ce6c.js.map": "/Food-Ordering-App/static/js/main.76b5ce6c.js.map",
+    "main.d12325f6.js.map": "/Food-Ordering-App/static/js/main.d12325f6.js.map",
     "787.9643ecdb.chunk.js.map": "/Food-Ordering-App/static/js/787.9643ecdb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.100bf866.css",
-    "static/js/main.76b5ce6c.js"
+    "static/js/main.d12325f6.js"
   ]
 }
