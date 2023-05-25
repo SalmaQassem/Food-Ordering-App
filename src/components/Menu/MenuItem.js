@@ -1,19 +1,17 @@
 import classes from "./MenuItem.module.css";
 import AddButton from "../UI/AddButton";
 import { useCallback } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cartSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const MenuItem = (props) => {
   const dispatch = useDispatch();
-  const menuItems = useSelector((state) => state.menu.items);
-
   const onFormSubmitHandler = useCallback(
     (e) => {
       e.preventDefault();
-      const item = menuItems.find((obj) => {
+      const item = props.menuItems.find((obj) => {
         return obj.id === parseInt(e.target.id);
       });
       if (item) {
@@ -26,7 +24,7 @@ const MenuItem = (props) => {
         dispatch(cartActions.addItems(selectedItem));
       }
     },
-    [menuItems, dispatch]
+    [props, dispatch]
   );
 
   return (

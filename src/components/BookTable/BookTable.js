@@ -245,6 +245,7 @@ const BookTable = () => {
                     ? `${classes.input} ${classes.invalid}`
                     : classes.input
                 }
+                aria-label="date"
                 type="date"
                 onKeyDown={(e) => {
                   e.preventDefault();

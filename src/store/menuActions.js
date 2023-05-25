@@ -2,7 +2,7 @@ import { menuActions } from "./menuSlice";
 import { storage } from "../firebase/firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 
-export const fetchData = () => {
+export const fetchMenuData = () => {
   return async (dispatch) => {
     const fetchImages = async () => {
       const storageRef = ref(storage, "images/menuImages/");
@@ -18,7 +18,7 @@ export const fetchData = () => {
         "https://feane-751cb-default-rtdb.firebaseio.com/menuList.json"
       );
       if (!response.ok) {
-        throw new Error("Fetching Menu Faild!");
+        throw new Error("Fetching Menu Failed!");
       }
       const data = await response.json();
       return data;

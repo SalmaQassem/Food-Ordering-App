@@ -49,8 +49,8 @@
   background-color: #f1f2f3;
 }
 .imageContainer img {
-  width: auto;
-  height: auto;
+  width: 180px;
+  height: 145px;
   max-width: 100%;
   max-height: 145px;
   -webkit-transition: 0.2s;

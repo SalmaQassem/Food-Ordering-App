@@ -127,7 +127,7 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li className={classes.cart} data-before={amount}>
-                  <span aria-label="Cart Page" onClick={onCartClickHandler}>
+                  <span onClick={onCartClickHandler}>
                     <FontAwesomeIcon icon={faCartShopping} />
                   </span>
                 </li>

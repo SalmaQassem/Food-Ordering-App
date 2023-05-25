@@ -3,6 +3,7 @@ import React from "react";
 import Container from "../UI/Container";
 import Carousel from "react-multi-carousel";
 import Button from "../UI/Button";
+import { useSelector } from "react-redux";
 const responsive = {
   desktop: {
     breakpoint: {
@@ -26,37 +27,18 @@ const responsive = {
     items: 1,
   },
 };
-const LandingItems = [
-  {
-    id: 0,
-    title: "fast food restaurant",
-    description:
-      "Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.",
-  },
-  {
-    id: 1,
-    title: "fast food restaurant",
-    description:
-      "Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.",
-  },
-  {
-    id: 2,
-    title: "fast food restaurant",
-    description:
-      "Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.",
-  },
-];
 const Landing = () => {
+  const landingItems = useSelector((state) => state.landing.items);
   const CustomDot = ({ onClick, ...rest }) => {
     const { active } = rest;
     return (
-      <button
+      <li
         className={
           active ? `${classes.dot}  ${classes.active}` : `${classes.dot}`
         }
         aria-label="dot"
         onClick={() => onClick()}
-      ></button>
+      ></li>
     );
   };
   return (
@@ -91,7 +73,7 @@ const Landing = () => {
           slidesToSlide={1}
           swipeable
         >
-          {LandingItems.map((item) => {
+          {landingItems.map((item) => {
             return (
               <div className={classes.text} key={item.id}>
                 <h1>{item.title}</h1>
