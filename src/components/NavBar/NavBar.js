@@ -3,12 +3,7 @@ import { useCallback, useContext } from "react";
 import { useSelector } from "react-redux";
 import Container from "../UI/Container";
 import Button from "../UI/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faCartShopping,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaUser, FaShoppingCart, FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import CartContext from "../../CartContext/CartContext";
@@ -123,12 +118,12 @@ const NavBar = () => {
                     aria-label="Profile Page"
                     onClick={linkClickHandler}
                   >
-                    <FontAwesomeIcon icon={faUser} />
+                    <FaUser />
                   </Link>
                 </li>
                 <li className={classes.cart} data-before={amount}>
                   <span onClick={onCartClickHandler}>
-                    <FontAwesomeIcon icon={faCartShopping} />
+                    <FaShoppingCart />
                   </span>
                 </li>
                 <li>
@@ -137,7 +132,7 @@ const NavBar = () => {
                     aria-label="Search Page"
                     onClick={linkClickHandler}
                   >
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    <FaSearch />
                   </Link>
                 </li>
               </ul>

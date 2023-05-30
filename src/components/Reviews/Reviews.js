@@ -5,11 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ReviewItem from "./ReviewItem";
 import AddButton from "../UI/AddButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 const responsive = {
@@ -44,14 +40,14 @@ const Reviews = () => {
           aria-label="add"
           onClick={() => previous()}
         >
-          <FontAwesomeIcon icon={faChevronLeft} />
+          <FaChevronLeft />
         </AddButton>
         <AddButton
           className={classes.rightButton}
           aria-label="add"
           onClick={() => goToSlide(currentSlide + 1)}
         >
-          <FontAwesomeIcon icon={faChevronRight} />
+          <FaChevronRight />
         </AddButton>
       </div>
     );

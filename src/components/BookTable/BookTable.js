@@ -6,8 +6,7 @@ import BookButton from "../UI/BookButton";
 import Map from "../Map/Map";
 import useInput from "../../hooks/useInput";
 import { useState, useCallback } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FiCheck } from "react-icons/fi";
 import SelectorInput from "../SelectorInput/SelectorInput";
 const DUMMYSELECTOR = [
   { id: "v1", value: "" },
@@ -136,7 +135,7 @@ const BookTable = () => {
             <Overlay />
             <div className={classes.confirm}>
               <div className={classes.icon}>
-                <FontAwesomeIcon icon={faCheck} />
+                <FiCheck />
               </div>
               <h3 className={classes.h3}>success</h3>
               <p className={classes.p}>

@@ -1,14 +1,14 @@
 import classes from "./Social.module.css";
 import FooterHeader from "../UI/FooterHeader";
 import FooterParagraph from "../UI/FooterParagraph";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebookF,
-  faTwitter,
-  faLinkedinIn,
-  faInstagram,
-  faPinterest,
-} from "@fortawesome/free-brands-svg-icons";
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+  FaPinterest,
+} from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 const Social = () => {
@@ -29,19 +29,19 @@ const Social = () => {
       </FooterParagraph>
       <div className={classes.links}>
         <Link to="/Food-Ordering-App/" aria-label="Facebook Link">
-          <FontAwesomeIcon icon={faFacebookF} />
+          <FaFacebookF />
         </Link>
         <Link to="/Food-Ordering-App/" aria-label="Twitter Link">
-          <FontAwesomeIcon icon={faTwitter} />
+          <FaTwitter />
         </Link>
         <Link to="/Food-Ordering-App/" aria-label="LinkedIn Link">
-          <FontAwesomeIcon icon={faLinkedinIn} />
+          <FaLinkedinIn />
         </Link>
         <Link to="/Food-Ordering-App/" aria-label="Instagram Link">
-          <FontAwesomeIcon icon={faInstagram} />
+          <FaInstagram />
         </Link>
         <Link to="/Food-Ordering-App/" aria-label="Pinterest Link">
-          <FontAwesomeIcon icon={faPinterest} />
+          <FaPinterest />
         </Link>
       </div>
     </div>

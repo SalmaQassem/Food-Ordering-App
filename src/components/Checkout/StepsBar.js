@@ -1,6 +1,5 @@
 import classes from "./StepsBar.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FiCheck } from "react-icons/fi";
 const StepsBar = (props) => {
   return (
     <section className={classes.stepsBar}>
@@ -14,9 +13,7 @@ const StepsBar = (props) => {
               : ""
           }
         >
-          <span>
-            {props.progress > 1 ? <FontAwesomeIcon icon={faCheck} /> : 1}
-          </span>
+          <span>{props.progress > 1 ? <FiCheck /> : 1}</span>
           <p>shipping</p>
         </li>
         <li
@@ -28,9 +25,7 @@ const StepsBar = (props) => {
               : ""
           }
         >
-          <span>
-            {props.progress > 2 ? <FontAwesomeIcon icon={faCheck} /> : 2}
-          </span>
+          <span>{props.progress > 2 ? <FiCheck /> : 2}</span>
           <p>personal details</p>
         </li>
         <li
@@ -42,9 +37,7 @@ const StepsBar = (props) => {
               : ""
           }
         >
-          <span>
-            {props.progress > 3 ? <FontAwesomeIcon icon={faCheck} /> : 3}
-          </span>
+          <span>{props.progress > 3 ? <FiCheck /> : 3}</span>
           <p>payment</p>
         </li>
         <li
@@ -56,9 +49,7 @@ const StepsBar = (props) => {
               : ""
           }
         >
-          <span>
-            {props.progress > 4 ? <FontAwesomeIcon icon={faCheck} /> : 4}
-          </span>
+          <span>{props.progress > 4 ? <FiCheck /> : 4}</span>
           <p>confirmation</p>
         </li>
       </ul>

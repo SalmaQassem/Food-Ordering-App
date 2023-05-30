@@ -2,8 +2,7 @@ import styles from "./ShoppingCartItem.module.css";
 import modules from "../Cart/CartItem.module.css";
 import classes from "./ConfirmPage.module.css";
 import RemoveButton from "../UI/RemoveButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { IoClose } from "react-icons/io5";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cartSlice";
 import { useCallback } from "react";
@@ -53,7 +52,7 @@ const ShoppingCartItem = (props) => {
             onClick={clickRemoveHandler}
           >
             <div className={styles.icon}>
-              <FontAwesomeIcon icon={faXmark} />
+              <IoClose />
             </div>
             remove
           </RemoveButton>

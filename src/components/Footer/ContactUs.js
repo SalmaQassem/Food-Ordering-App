@@ -1,10 +1,6 @@
 import classes from "./ContactUs.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocationDot,
-  faPhone,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+import { IoCall, IoLocationSharp } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 import FooterHeader from "../UI/FooterHeader";
 import { Link } from "react-router-dom";
 
@@ -15,19 +11,19 @@ const ContactUs = () => {
       <div className={classes.box}>
         <Link to="/Food-Ordering-App/" aria-label="Location">
           <span className={classes.icon}>
-            <FontAwesomeIcon icon={faLocationDot} />
+            <IoLocationSharp />
           </span>
           <span>Location</span>
         </Link>
         <Link to="/Food-Ordering-App/" aria-label="Phone">
           <span className={classes.icon}>
-            <FontAwesomeIcon icon={faPhone} />
+            <IoCall />
           </span>
           <span> Call +01 1234567890</span>
         </Link>
         <Link to="/Food-Ordering-App/" aria-label="Email">
           <span className={classes.icon}>
-            <FontAwesomeIcon icon={faEnvelope} />
+            <MdEmail />
           </span>
           <span>demo@gmail.com</span>
         </Link>

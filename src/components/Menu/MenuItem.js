@@ -3,15 +3,15 @@ import AddButton from "../UI/AddButton";
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cartSlice";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { FaShoppingCart } from "react-icons/fa";
+
 
 const MenuItem = (props) => {
   const dispatch = useDispatch();
   const onFormSubmitHandler = useCallback(
     (e) => {
       e.preventDefault();
-      const item = props.menuItems.find((obj) => {
+      const item = props.menu.find((obj) => {
         return obj.id === parseInt(e.target.id);
       });
       if (item) {
@@ -24,7 +24,7 @@ const MenuItem = (props) => {
         dispatch(cartActions.addItems(selectedItem));
       }
     },
-    [props, dispatch]
+    [props,dispatch]
   );
 
   return (
@@ -48,7 +48,7 @@ const MenuItem = (props) => {
         <div className={classes.priceContainer}>
           <h3 className={classes.price}>${props.item.price}</h3>
           <AddButton type="submit" aria-label="add">
-            <FontAwesomeIcon icon={faCartShopping} />
+            <FaShoppingCart />
           </AddButton>
         </div>
       </div>

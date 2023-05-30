@@ -2,8 +2,7 @@ import classes from "./Offers.module.css";
 import React from "react";
 import Container from "../UI/Container";
 import Button from "../UI/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 const Offers = () => {
@@ -33,7 +32,7 @@ const Offers = () => {
                   >
                     order now
                     <span className={classes.icon}>
-                      <FontAwesomeIcon icon={faCartShopping} />
+                      <FaShoppingCart />
                     </span>
                   </Button>
                 </div>
