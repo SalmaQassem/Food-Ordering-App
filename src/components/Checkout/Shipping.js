@@ -82,10 +82,10 @@ const Shipping = () => {
   }, [blurGovernorateHandler]);
   return (
     <div className={classes.container}>
-      <h4>shipping details</h4>
+      <h1>shipping details</h1>
       <div className={classes.info}>
         <div className={classes.inputContainer}>
-          <label className={classes.label}>country</label>
+          <p className={classes.label}>country</p>
           <SelectorInput
             data={DUMMYCOUNTRIES}
             default="Choose Country?"
@@ -98,7 +98,7 @@ const Shipping = () => {
           />
         </div>
         <div className={classes.inputContainer}>
-          <label className={classes.label}>governorate</label>
+          <p className={classes.label}>governorate</p>
           <SelectorInput
             data={governorates}
             default="Choose Governorate?"
@@ -111,16 +111,22 @@ const Shipping = () => {
           />
         </div>
         <div className={classes.inputContainer}>
-          <label className={classes.label}>city</label>
-          <input type="text" className={classes.input} />
+          <label className={classes.label} htmlFor="city-id">
+            city
+          </label>
+          <input type="text" className={classes.input} id="city-id" />
         </div>
         <div className={classes.inputContainer}>
-          <label className={classes.label}>street line 1</label>
-          <input type="text" className={classes.input} />
+          <label className={classes.label} htmlFor="street1-id">
+            street line 1
+          </label>
+          <input type="text" className={classes.input} id="street1-id" />
         </div>
         <div className={classes.inputContainer}>
-          <label className={classes.label}>street line 2</label>
-          <input type="text" className={classes.input} />
+          <label className={classes.label} htmlFor="street2-id">
+            street line 2
+          </label>
+          <input type="text" className={classes.input} id="street2-id" />
         </div>
       </div>
     </div>

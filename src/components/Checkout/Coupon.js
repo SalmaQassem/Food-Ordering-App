@@ -3,9 +3,11 @@ import classes from "./Coupon.module.css";
 const Coupon = () => {
   return (
     <div className={classes.coupon}>
-      <p>gift card / discount code</p>
+      <label className={classes.label} htmlFor="coupon-id">
+        gift card / discount code
+      </label>
       <div className={classes.box}>
-        <input type="text" />
+        <input type="text" id="coupon-id" />
         <button className={classes.apply} type="button">
           apply
         </button>

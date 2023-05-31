@@ -11,7 +11,7 @@ const Background = (props) => {
           props.class === "sub" ? `${classes.subImage}` : classes.image
         }
       >
-        <img src={background} alt="background" loading="lazy"></img>
+        <img src={background} alt="background"></img>
       </div>
       {props.children}
     </section>

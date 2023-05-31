@@ -8,19 +8,19 @@ const Prices = () => {
   return (
     <div className={classes.prices}>
       <div className={classes.item}>
-        <h4 className={classes.title}>sub total</h4>
+        <h3 className={classes.title}>sub total</h3>
         <p className={classes.p}>{`$${subTotal}`}</p>
       </div>
       <div className={classes.item}>
-        <h4 className={classes.title}>shipping</h4>
+        <h3 className={classes.title}>shipping</h3>
         <p className={classes.p}>{`$${shipping}`}</p>
       </div>
       <div className={classes.item}>
-        <h4 className={classes.title}>tax</h4>
+        <h3 className={classes.title}>tax</h3>
         <p className={classes.p}>{`$${tax.toFixed(2)}`}</p>
       </div>
       <div className={classes.item}>
-        <h4>total</h4>
+        <h3>total</h3>
         <p>{`$${total.toFixed(2)}`}</p>
       </div>
     </div>

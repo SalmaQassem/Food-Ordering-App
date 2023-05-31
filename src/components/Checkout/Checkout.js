@@ -34,7 +34,7 @@ const Checkout = () => {
             {steps === 4 && <ConfirmPage />}
             <div className={classes.summary}>
               <div className={classes.header}>
-                <h4>order summary</h4>
+                <h2>order summary</h2>
                 <p>The total cost includes the tax and the shipping charge.</p>
               </div>
               <Coupon />

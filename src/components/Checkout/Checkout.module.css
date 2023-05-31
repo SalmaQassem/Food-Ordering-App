@@ -52,14 +52,14 @@
   -webkit-box-shadow: 0 1px 4px 1px #ccc;
   box-shadow: 0 1px 4px 1px #ccc;
 }
-.header h4,
+.header h2,
 .header p,
-.item h4,
+.item h3,
 .item p {
   color: #7b7b7b;
   text-transform: capitalize;
 }
-.header h4 {
+.header h2 {
   margin-bottom: 10px;
   font-size: 18px;
 }
@@ -68,9 +68,10 @@
   text-transform: none;
 }
 .header p,
-.item:not(:last-of-type) h4,
+.item:not(:last-of-type) h3,
 .item:not(:last-of-type) p {
   font-weight: 400;
+  font-size: 15px;
 }
 .prices {
   display: -webkit-box;
@@ -94,7 +95,7 @@
   align-items: center;
   font-size: 15px;
 }
-.item:last-of-type h4,
+.item:last-of-type h3,
 .item:last-of-type p {
   color: var(--MainColor);
   font-weight: bold;

@@ -7,13 +7,13 @@
   -webkit-box-shadow: 0 1px 4px 1px #ccc;
   box-shadow: 0 1px 4px 1px #ccc;
 }
-.container h4,
+.container h1,
 .label {
   display: block;
   color: #7b7b7b;
   text-transform: capitalize;
 }
-.container h4 {
+.container h1 {
   margin-bottom: 18px;
   font-size: 18px;
   font-weight: bold;
