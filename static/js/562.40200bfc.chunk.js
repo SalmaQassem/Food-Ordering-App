@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfood_ordering_app=self.webpackChunkfood_ordering_app||[]).push([[562],{4562:function(n,e,o){o.r(e);var r=o(184);e.default=function(){return(0,r.jsx)("h1",{children:"Page not Found"})}}}]);
+//# sourceMappingURL=562.40200bfc.chunk.js.map

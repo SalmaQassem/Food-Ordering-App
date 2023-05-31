@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfood_ordering_app=self.webpackChunkfood_ordering_app||[]).push([[853],{3853:function(n,o,r){r.d(o,{UgA:function(){return e}});var t=r(9983);function e(n){return(0,t.w_)({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"20 6 9 17 4 12"}}]})(n)}}}]);
+//# sourceMappingURL=853.61ceb650.chunk.js.map
