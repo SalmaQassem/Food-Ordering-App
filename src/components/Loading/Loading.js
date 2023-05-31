@@ -17,7 +17,7 @@ const Loading = () => {
           return prevState + 1;
         }
       });
-    }, 500);
+    }, 400);
   }, []);
   return (
     <div className={classes.loading}>

@@ -24,7 +24,14 @@
   border-radius: 50%;
   background-color: #fff;
   font-size: 32px;
-  transition: 0.2s ease;
+  transition: 0.1s ease;
+}
+@media (max-width: 576px) {
+  .ul li {
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+  }
 }
 .active {
   transform: scale(1.4);

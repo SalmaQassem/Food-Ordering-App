@@ -13,13 +13,14 @@ import "./fonts/DancingScript-Regular.ttf";
 import "./fonts/DancingScript-Medium.ttf";
 import "./fonts/DancingScript-SemiBold.ttf";
 import "./fonts/DancingScript-Bold.ttf";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchLandingData } from "./store/landingActions";
 import { fetchOffersData } from "./store/offersActions";
 import { fetchMenuData } from "./store/menuActions";
 import { fetchReviewsData } from "./store/reviewsActions";
+import Loading from "./components/Loading/Loading";
 
 const routes = createBrowserRouter([
   {
@@ -45,18 +46,28 @@ const routes = createBrowserRouter([
 ]);
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
   const landingDispatch = useDispatch();
   const offersDispatch = useDispatch();
   const menuDispatch = useDispatch();
   const reviewsDispatch = useDispatch();
-
+  const returnValue = isLoading ? (
+    <Loading />
+  ) : (
+    <RouterProvider router={routes} />
+  );
   useEffect(() => {
+    setIsLoading(true);
     landingDispatch(fetchLandingData());
     offersDispatch(fetchOffersData());
     menuDispatch(fetchMenuData());
     reviewsDispatch(fetchReviewsData());
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
   }, [landingDispatch, offersDispatch, menuDispatch, reviewsDispatch]);
-  return <RouterProvider router={routes} />;
+
+  return returnValue;
 }
 
 export default App;
