@@ -23,7 +23,7 @@ const About = () => {
               hidden in the middle of text. All
             </p>
             <Button
-              to="/Food-Ordering-App/About"
+              to="/Feane/About"
               aria-label="About Page"
               className={classes.a}
             >

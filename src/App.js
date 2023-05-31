@@ -1,46 +1,95 @@
 import "./App.css";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
-import HomeRoot from "./components/Roots/HomeRoot";
-import HomePage from "./components/HomePage/HomePage";
-import Error from "./components/Error/Error";
-import Root from "./components/Roots/RootLayout";
-import Checkout from "./components/Checkout/Checkout";
-import Menu from "./components/Menu/Menu";
-import About from "./components/About/About";
-import BookTable from "./components/BookTable/BookTable";
-import "./fonts/DancingScript-Regular.ttf";
-import "./fonts/DancingScript-Medium.ttf";
-import "./fonts/DancingScript-SemiBold.ttf";
-import "./fonts/DancingScript-Bold.ttf";
-import { useLayoutEffect, useState } from "react";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchLandingData } from "./store/landingActions";
 import { fetchOffersData } from "./store/offersActions";
 import { fetchMenuData } from "./store/menuActions";
 import { fetchReviewsData } from "./store/reviewsActions";
-import Loading from "./components/Loading/Loading";
+import "./fonts/DancingScript-Regular.ttf";
+import "./fonts/DancingScript-Medium.ttf";
+import "./fonts/DancingScript-SemiBold.ttf";
+import "./fonts/DancingScript-Bold.ttf";
+const HomeRoot = lazy(() => import("./components/Roots/HomeRoot"));
+const HomePage = lazy(() => import("./components/HomePage/HomePage"));
+const Error = lazy(() => import("./components/Error/Error"));
+const Root = lazy(() => import("./components/Roots/RootLayout"));
+const Checkout = lazy(() => import("./components/Checkout/Checkout"));
+const Menu = lazy(() => import("./components/Menu/Menu"));
+const About = lazy(() => import("./components/About/About"));
+const BookTable = lazy(() => import("./components/BookTable/BookTable"));
+const Loading = lazy(() => import("./components/Loading/Loading"));
 
 const routes = createBrowserRouter([
   {
-    path: "/Food-Ordering-App/",
-    element: <HomeRoot />,
-    errorElement: <Error />,
-    children: [{ index: true, element: <HomePage /> }],
+    path: "/Feane/",
+    element: (
+      <Suspense fallback={<Loading />}>
+        <HomeRoot />
+      </Suspense>
+    ),
+    errorElement: (
+      <Suspense fallback={<Loading />}>
+        <Error />
+      </Suspense>
+    ),
+    children: [
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <HomePage />
+          </Suspense>
+        ),
+      },
+    ],
   },
   {
-    path: "/Food-Ordering-App/",
-    element: <Root />,
-    errorElement: <Error />,
+    path: "/Feane/",
+    element: (
+      <Suspense fallback={<Loading />}>
+        <Root />
+      </Suspense>
+    ),
+    errorElement: (
+      <Suspense fallback={<Loading />}>
+        <Error />
+      </Suspense>
+    ),
     children: [
-      { path: "Checkout", element: <Checkout /> },
+      {
+        path: "Checkout",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Checkout />
+          </Suspense>
+        ),
+      },
       {
         path: "Menu",
-        element: <Menu />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Menu />
+          </Suspense>
+        ),
       },
-      { path: "About", element: <About /> },
-      { path: "BookTable", element: <BookTable /> },
+      {
+        path: "About",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <About />
+          </Suspense>
+        ),
+      },
+      {
+        path: "BookTable",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <BookTable />
+          </Suspense>
+        ),
+      },
     ],
   },
 ]);

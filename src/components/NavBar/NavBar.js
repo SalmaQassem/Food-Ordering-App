@@ -33,11 +33,7 @@ const NavBar = () => {
     <nav className={classes.navbar}>
       <Container>
         <nav className={classes.items}>
-          <Link
-            to="/Food-Ordering-App/"
-            aria-label="Home Page"
-            className={classes.logo}
-          >
+          <Link to="/Feane/" aria-label="Home Page" className={classes.logo}>
             <span>feane</span>
           </Link>
           <div
@@ -62,7 +58,7 @@ const NavBar = () => {
             <ul className={classes.links}>
               <li>
                 <NavLink
-                  to="/Food-Ordering-App/"
+                  to="/Feane/"
                   aria-label="Home Page"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
@@ -75,7 +71,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
-                  to="Menu"
+                  to="/Feane/Menu"
                   aria-label="Menu Page"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
@@ -87,7 +83,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
-                  to="About"
+                  to="/Feane/About"
                   aria-label="About Page"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
@@ -99,7 +95,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
-                  to="BookTable"
+                  to="/Feane/BookTable"
                   aria-label="BookTable Page"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
@@ -114,7 +110,7 @@ const NavBar = () => {
               <ul className={classes.sideList}>
                 <li>
                   <Link
-                    to="/Food-Ordering-App/"
+                    to="/Feane/"
                     aria-label="Profile Page"
                     onClick={linkClickHandler}
                   >
@@ -128,7 +124,7 @@ const NavBar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/Food-Ordering-App/"
+                    to="/Feane/"
                     aria-label="Search Page"
                     onClick={linkClickHandler}
                   >
@@ -137,7 +133,7 @@ const NavBar = () => {
                 </li>
               </ul>
               <Button
-                to="Menu"
+                to="/Feane/Menu"
                 aria-label="Order Button"
                 onClick={linkClickHandler}
               >

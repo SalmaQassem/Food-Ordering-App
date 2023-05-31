@@ -79,7 +79,7 @@ const Landing = () => {
                 <h1>{item.title}</h1>
                 <p>{item.description}</p>
                 <Button
-                  to="Menu"
+                  to="/Feane/Menu"
                   className={classes.button}
                   aria-label="Menu Page"
                 >

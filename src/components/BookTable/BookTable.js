@@ -165,6 +165,7 @@ const BookTable = () => {
                     ? `${classes.input} ${classes.invalid}`
                     : classes.input
                 }
+                id="name-id"
                 type="text"
                 placeholder="your name"
                 value={nameValue}
@@ -185,6 +186,7 @@ const BookTable = () => {
                     ? `${classes.input} ${classes.invalid}`
                     : classes.input
                 }
+                id="number-id"
                 type="number"
                 placeholder="phone number"
                 value={phoneValue}
@@ -207,6 +209,7 @@ const BookTable = () => {
                     ? `${classes.input} ${classes.invalid}`
                     : classes.input
                 }
+                id="email-id"
                 type="email"
                 placeholder="your email"
                 value={emailValue}

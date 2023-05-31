@@ -1,8 +1,8 @@
 {
-  "homepage": "https://SalmaQassem.github.io/Food-Ordering-App",
+  "homepage": "https://SalmaQassem.github.io/Feane/",
   "name": "food-ordering-app",
   "version": "0.1.0",
-  "private": true,
+  "public": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
