@@ -15,7 +15,11 @@ const Social = () => {
   return (
     <div className={classes.social}>
       <FooterHeader>
-        <Link to="/Feane/" className={classes.header} aria-label="Home Page">
+        <Link
+          to="/Food-Ordering-App/"
+          className={classes.header}
+          aria-label="Home Page"
+        >
           feane
         </Link>
       </FooterHeader>
@@ -24,19 +28,19 @@ const Social = () => {
         a dictionary of over 200 Latin words, combined with
       </FooterParagraph>
       <div className={classes.links}>
-        <Link to="/Feane/" aria-label="Facebook Link">
+        <Link to="/Food-Ordering-App/" aria-label="Facebook Link">
           <FaFacebookF />
         </Link>
-        <Link to="/Feane/" aria-label="Twitter Link">
+        <Link to="/Food-Ordering-App/" aria-label="Twitter Link">
           <FaTwitter />
         </Link>
-        <Link to="/Feane/" aria-label="LinkedIn Link">
+        <Link to="/Food-Ordering-App/" aria-label="LinkedIn Link">
           <FaLinkedinIn />
         </Link>
-        <Link to="/Feane/" aria-label="Instagram Link">
+        <Link to="/Food-Ordering-App/" aria-label="Instagram Link">
           <FaInstagram />
         </Link>
-        <Link to="/Feane/" aria-label="Pinterest Link">
+        <Link to="/Food-Ordering-App/" aria-label="Pinterest Link">
           <FaPinterest />
         </Link>
       </div>

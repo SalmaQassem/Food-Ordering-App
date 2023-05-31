@@ -9,19 +9,19 @@ const ContactUs = () => {
     <div>
       <FooterHeader>contact us</FooterHeader>
       <div className={classes.box}>
-        <Link to="/Feane/" aria-label="Location">
+        <Link to="/Food-Ordering-App/" aria-label="Location">
           <span className={classes.icon}>
             <IoLocationSharp />
           </span>
           <span>Location</span>
         </Link>
-        <Link to="/Feane/" aria-label="Phone">
+        <Link to="/Food-Ordering-App/" aria-label="Phone">
           <span className={classes.icon}>
             <IoCall />
           </span>
           <span> Call +01 1234567890</span>
         </Link>
-        <Link to="/Feane/" aria-label="Email">
+        <Link to="/Food-Ordering-App/" aria-label="Email">
           <span className={classes.icon}>
             <MdEmail />
           </span>

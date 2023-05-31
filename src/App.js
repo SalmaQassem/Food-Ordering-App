@@ -23,7 +23,7 @@ const Loading = lazy(() => import("./components/Loading/Loading"));
 
 const routes = createBrowserRouter([
   {
-    path: "/Feane/",
+    path: "/Food-Ordering-App/",
     element: (
       <Suspense fallback={<Loading />}>
         <HomeRoot />
@@ -46,7 +46,7 @@ const routes = createBrowserRouter([
     ],
   },
   {
-    path: "/Feane/",
+    path: "/Food-Ordering-App/",
     element: (
       <Suspense fallback={<Loading />}>
         <Root />

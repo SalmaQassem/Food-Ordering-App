@@ -26,7 +26,7 @@ const Offers = () => {
                     </span>
                   </h3>
                   <Button
-                    to="/Feane/Menu"
+                    to="/Food-Ordering-App/Menu"
                     aria-label="Menu Page"
                     className={classes.button}
                   >

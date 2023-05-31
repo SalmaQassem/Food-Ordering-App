@@ -33,7 +33,11 @@ const NavBar = () => {
     <nav className={classes.navbar}>
       <Container>
         <nav className={classes.items}>
-          <Link to="/Feane/" aria-label="Home Page" className={classes.logo}>
+          <Link
+            to="/Food-Ordering-App/"
+            aria-label="Home Page"
+            className={classes.logo}
+          >
             <span>feane</span>
           </Link>
           <div
@@ -58,7 +62,7 @@ const NavBar = () => {
             <ul className={classes.links}>
               <li>
                 <NavLink
-                  to="/Feane/"
+                  to="/Food-Ordering-App/"
                   aria-label="Home Page"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
@@ -71,7 +75,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/Feane/Menu"
+                  to="/Food-Ordering-App/Menu"
                   aria-label="Menu Page"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
@@ -83,7 +87,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/Feane/About"
+                  to="/Food-Ordering-App/About"
                   aria-label="About Page"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
@@ -95,7 +99,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/Feane/BookTable"
+                  to="/Food-Ordering-App/BookTable"
                   aria-label="BookTable Page"
                   className={({ isActive }) =>
                     isActive ? classes.active : undefined
@@ -110,7 +114,7 @@ const NavBar = () => {
               <ul className={classes.sideList}>
                 <li>
                   <Link
-                    to="/Feane/"
+                    to="/Food-Ordering-App/"
                     aria-label="Profile Page"
                     onClick={linkClickHandler}
                   >
@@ -124,7 +128,7 @@ const NavBar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/Feane/"
+                    to="/Food-Ordering-App/"
                     aria-label="Search Page"
                     onClick={linkClickHandler}
                   >
@@ -133,7 +137,7 @@ const NavBar = () => {
                 </li>
               </ul>
               <Button
-                to="/Feane/Menu"
+                to="/Food-Ordering-App/Menu"
                 aria-label="Order Button"
                 onClick={linkClickHandler}
               >
