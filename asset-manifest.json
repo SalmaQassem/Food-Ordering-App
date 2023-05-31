@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Food-Ordering-App/static/css/main.2d648760.css",
-    "main.js": "/Food-Ordering-App/static/js/main.7abc6c46.js",
+    "main.css": "/Food-Ordering-App/static/css/main.5fd3bbc2.css",
+    "main.js": "/Food-Ordering-App/static/js/main.822fe2c1.js",
     "static/js/787.9643ecdb.chunk.js": "/Food-Ordering-App/static/js/787.9643ecdb.chunk.js",
     "static/media/about-img.webp": "/Food-Ordering-App/static/media/about-img.8bad30ea401823bbbd50.webp",
     "static/media/OpenSans-Medium.ttf": "/Food-Ordering-App/static/media/OpenSans-Medium.a4894b36b47378c77c5f.ttf",
@@ -19,12 +19,12 @@
     "static/media/visa.svg": "/Food-Ordering-App/static/media/visa.5e51695a3be76ccf0f4a2c0003df3cee.svg",
     "index.html": "/Food-Ordering-App/index.html",
     "static/media/mastercard.svg": "/Food-Ordering-App/static/media/mastercard.25350e288da9a9ef7328a4fb6d012ed7.svg",
-    "main.2d648760.css.map": "/Food-Ordering-App/static/css/main.2d648760.css.map",
-    "main.7abc6c46.js.map": "/Food-Ordering-App/static/js/main.7abc6c46.js.map",
+    "main.5fd3bbc2.css.map": "/Food-Ordering-App/static/css/main.5fd3bbc2.css.map",
+    "main.822fe2c1.js.map": "/Food-Ordering-App/static/js/main.822fe2c1.js.map",
     "787.9643ecdb.chunk.js.map": "/Food-Ordering-App/static/js/787.9643ecdb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d648760.css",
-    "static/js/main.7abc6c46.js"
+    "static/css/main.5fd3bbc2.css",
+    "static/js/main.822fe2c1.js"
   ]
 }
