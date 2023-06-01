@@ -11,6 +11,7 @@ import "./fonts/DancingScript-Regular.ttf";
 import "./fonts/DancingScript-Medium.ttf";
 import "./fonts/DancingScript-SemiBold.ttf";
 import "./fonts/DancingScript-Bold.ttf";
+const Loading = lazy(() => import("./components/Loading/Loading"));
 const HomeRoot = lazy(() => import("./components/Roots/HomeRoot"));
 const HomePage = lazy(() => import("./components/HomePage/HomePage"));
 const Error = lazy(() => import("./components/Error/Error"));
@@ -19,7 +20,7 @@ const Checkout = lazy(() => import("./components/Checkout/Checkout"));
 const Menu = lazy(() => import("./components/Menu/Menu"));
 const About = lazy(() => import("./components/About/About"));
 const BookTable = lazy(() => import("./components/BookTable/BookTable"));
-const Loading = lazy(() => import("./components/Loading/Loading"));
+const Login = lazy(() => import("./components/Login/Login"));
 
 const routes = createBrowserRouter([
   {
@@ -87,6 +88,14 @@ const routes = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <BookTable />
+          </Suspense>
+        ),
+      },
+      {
+        path: "Login",
+        element: (
+          <Suspense>
+            <Login />
           </Suspense>
         ),
       },

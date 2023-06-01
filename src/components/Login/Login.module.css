@@ -1,0 +1,98 @@
+.loginContainer {
+  display: flex;
+  padding: 40px 0;
+}
+.image,
+.formContainer {
+  flex: 1;
+  padding: 0 15px;
+}
+.image {
+  display: none;
+}
+@media (min-width: 768px) {
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.image img {
+  width: 70%;
+  height: 100%;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.head > h1 {
+  margin-bottom: 5px;
+  line-height: 1;
+  text-transform: capitalize;
+}
+.head > p {
+  color: #7b7b7b;
+  font-size: 14px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.input {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.icon {
+  position: absolute;
+  left: 15px;
+  color: var(--MainColor);
+}
+.input > input {
+  width: 100%;
+  height: 40px;
+  padding: 15px 45px;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+.input > input::placeholder {
+  text-transform: capitalize;
+  font-size: 13px;
+}
+.input > input:focus {
+  border-color: var(--MainColor);
+  outline: 1px solid var(--MainColor);
+}
+.submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.submit > button {
+  margin: 0;
+}
+.submit > a {
+  color: #7b7b7b;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.signup {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+.signup > p {
+  color: #7b7b7b;
+}
+.signup > a {
+  margin-left: 5px;
+  color: var(--MainColor);
+  font-weight: bold;
+  text-transform: capitalize;
+}

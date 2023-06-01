@@ -2,7 +2,7 @@ import classes from "./Checkout.module.css";
 import { useState } from "react";
 import Container from "../UI/Container";
 import StepsBar from "./StepsBar";
-import BookButton from "../UI/BookButton";
+import BookButton from "../UI/MainButton";
 import Coupon from "./Coupon";
 import Shipping from "./Shipping";
 import PersonalDetails from "./PersonalDetails";

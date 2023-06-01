@@ -114,7 +114,7 @@ const NavBar = () => {
               <ul className={classes.sideList}>
                 <li>
                   <Link
-                    to="/Food-Ordering-App/"
+                    to="/Food-Ordering-App/Login"
                     aria-label="Profile Page"
                     onClick={linkClickHandler}
                   >

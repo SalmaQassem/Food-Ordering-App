@@ -2,7 +2,7 @@ import classes from "./BookTable.module.css";
 import Container from "../UI/Container";
 import Overlay from "../UI/Overlay";
 import Header from "../UI/Header";
-import BookButton from "../UI/BookButton";
+import BookButton from "../UI/MainButton";
 import Map from "../Map/Map";
 import useInput from "../../hooks/useInput";
 import { useState, useCallback } from "react";
